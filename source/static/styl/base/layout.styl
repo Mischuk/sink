@@ -1,0 +1,33 @@
+$wrapper = 1200px
+$footer = 350px
+$footerMobile = 300px
+
+html
+  position relative
+  min-height 100%
+body
+  font-family 'Roboto', sans-serif
+  font-size 16px
+  line-height 1.2
+  margin-bottom $footerMobile + 20
+  background #fff
+  @media XS
+    margin-bottom 290px
+  @media SM
+    margin-bottom $footer + 20
+footer
+  height $footerMobile
+  @media XS
+    height 260px
+  @media SM
+    height $footer
+.wrapper
+  clearfix()
+  position relative
+  max-width $wrapper
+  height 100%
+  padding-left 15px
+  padding-right 15px
+  margin-left auto
+  margin-right auto
+

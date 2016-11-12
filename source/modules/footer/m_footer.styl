@@ -1,0 +1,202 @@
+.m_footer
+  position absolute
+  left 0
+  bottom 0
+  width 100%
+  padding 20px 0
+  font-size 14px
+  color #999
+  background url("../images/patterns/pattern5.jpg") repeat 0 0
+  text-align center
+  @media XS
+    padding 30px 0
+    text-align left
+  @media LG
+    padding 50px 0
+  .info
+    @media XS
+      float left
+      width 50%
+      text-align left
+    @media SM
+      width 25%
+    .desc
+      padding 10px
+      @media XS
+        padding-left 0
+      @media SM
+        padding-top 25px
+  .menu
+    display none
+    @media SM
+      clearfix()
+      display block
+      float left
+      width 50%
+    .column
+      float left
+      width 50%
+      padding-left 5%
+    .title
+      margin-bottom 15px
+      color #fff
+      text-transform uppercase
+    ul
+      li
+        padding 10px 0
+        a
+          anim()
+          color #999
+          text-decoration underline
+          &:hover
+            color #fff
+  .contacts
+    clearfix()
+    @media SM
+      float left
+      width 25%
+    > div
+      @media XS
+        float left
+        width 50%
+      @media SM
+        float none
+        width 100%
+    .phones
+      @media XS
+        position absolute
+        right 0
+        top 0
+        text-align left
+      @media SM
+        position static
+      a
+        color #fff
+      .tel
+        font-size 20px
+        font-weight bold
+        a
+          position relative
+          cursor default
+          padding-left 30px
+          &:after
+            content ''
+            position absolute
+            left 0
+            top 50%
+            margin-top -10px
+            size(20px)
+            sprite()
+            background-position 0 -400px
+      .callback
+        max-width 200px
+        margin 10px auto
+        @media XS
+          margin 10px 0
+        @media SM
+          margin-top 25px
+          margin-bottom 25px
+        a
+          anim()
+          display block
+          padding 10px
+          text-align center
+          border 2px solid rgba(153, 153, 153, .3)
+          border-radius 20px
+          &:hover
+            background #fff
+            border-color #fff
+            color $blue
+    .locate, .socials
+      @media XS
+        margin-top 50px
+        margin-bottom 0
+        text-align left
+      @media SM
+        margin 25px 0
+    .locate
+      margin-bottom 15px
+      @media XS
+        padding-right 20px
+      @media SM
+        padding-right 0
+      > div
+        margin-bottom 5px
+      .email
+        a
+          color #999
+    .socials
+      @media LG
+        line-height 40px
+      ul
+        display block
+        padding-top 5px
+        text-align center
+        cursor default
+        @media XS
+          text-align left
+        @media LG
+          display inline-block
+          vertical-align middle
+          padding-left 10px
+          padding-top 0
+        li
+          display inline-block
+          vertical-align middle
+          size(40px)
+          margin 0 5px
+          @media XS
+            margin-left 0
+            margin-right 10px
+        a
+          anim()
+          position relative
+          display block
+          size(100%)
+          &:after
+            content ''
+            position absolute
+            left 50%
+            top 50%
+            sprite()
+          &.vk
+            background #3e628a
+            &:hover
+              background #3e628a - 15%
+            &:after
+              background-position -50px -400px
+              width 16px
+              height 10px
+              margin-left -(@width/2)
+              margin-top -(@height/2)
+          &.facebook
+            background #375794
+            &:hover
+              background #375794 - 15%
+            &:after
+              background-position -100px -400px
+              width 8px
+              height 16px
+              margin-left -(@width/2)
+              margin-top -(@height/2)
+          &.twitter
+            background #00aced
+            &:hover
+              background #00aced - 15%
+            &:after
+              background-position -150px -400px
+              width 14px
+              height 12px
+              margin-left -(@width/2)
+              margin-top -(@height/2)
+    .developed
+      display none
+      @media SM
+        display block
+        text-align left
+      a
+        anim()
+        color #999
+        text-decoration underline
+        &:hover
+          color #fff

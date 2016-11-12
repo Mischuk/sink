@@ -1,0 +1,27 @@
+doctype html
+html(lang="ru").no-js
+  head
+    block title
+      title Default title
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="msapplication-tap-highlight" content="no")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic-ext" rel="stylesheet")
+    link(rel="icon" href="favicon.ico" type="image/x-icon")
+    link(rel="stylesheet" href="css/plugins.css")
+    link(rel="stylesheet" href="css/app.min.css")
+    script(src="js/modernizr.js")
+  body
+    include ../header/m_header
+    // Main
+    .container
+      block content
+    block footer
+    //- include ../footer/m_footer
+    // Popups background layer
+    .background-layer
+    // JS
+    script(src="js/jquery.min.js")
+    script(src="js/plugins.js")
+    script(src="js/app.js")
