@@ -1,0 +1,58 @@
+.m_brands
+  padding 50px 0
+  background url("../images/patterns/pattern2.jpg") repeat 0 0
+  html.no-touchevents &
+    background-attachment fixed
+  .slick-slider
+    position static
+  .slick-arrow
+    position absolute
+    top 0
+    width 13px
+    height 20px
+    background none
+    border none
+    text-indent -9999px
+    sprite()
+    &.slick-disabled
+      opacity .25
+      cursor default
+    &.slick-next
+      right 25px
+      background-position -250px -250px
+      &:hover
+        background-position -250px -300px
+    &.slick-prev
+      background-position -200px -250px
+      right 55px
+      &:hover
+        background-position -200px -300px
+  h2
+    font-size 24px
+    margin-top -5px
+    font-weight bold
+    text-transform uppercase
+    padding-right 70px
+    padding-left 10px
+    text-align left
+    @media XS
+      padding-left 70px
+      text-align center
+  .brands-carousel
+    margin-top 30px
+    .slide
+      height 130px
+      padding 10px
+      .image
+        width 100%
+        height 100%
+        line-height 110px
+        background #fff
+        border 1px solid #e3e9ea
+        text-align center
+        overflow hidden
+        img
+          display inline-block
+          vertical-align middle
+          max-width 90%
+          max-height 100%

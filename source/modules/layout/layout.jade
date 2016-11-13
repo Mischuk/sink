@@ -13,15 +13,14 @@ html(lang="ru").no-js
     link(rel="stylesheet" href="css/app.min.css")
     script(src="js/modernizr.js")
   body
-    //- include ../header/m_header
-    block header
+    include ../header/m_header
     // Main
     .container
       block content
     include ../footer/m_footer
-    block popups
     // Popups background layer
     .background-layer
+    include ../popups/m_popups
     // JS
     script(src="js/jquery.min.js")
     script(src="js/plugins.js")

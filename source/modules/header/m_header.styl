@@ -1,6 +1,7 @@
 .m_header
   position relative
   z-index 1000
+  background #fff
   .top-header,
   .bottom-header
     position relative
@@ -88,13 +89,23 @@
     background #fff
     @media XS
       height 93px
+    .wrapper
+      &:after,
+      &:before
+        display none
     .logo
       width 159px
-      height 54px
-      margin 10px auto
+      height 64px
+      margin 0 auto
+      padding-top 10px
       @media XS
-        float left
-        margin 19.5px 0
+        position absolute
+        left 15px
+        top 50%
+        height 54px
+        margin-top -27px
+        padding-top 0
+        // margin 19.5px 0
       a
         display block
         size(100%)
@@ -131,8 +142,9 @@
             > a
               line-height 1.5
               border-bottom 2px solid $red
+          &:hover
             .m_menu-dropdown
-              display block
+              display block !important
         @media MD
           padding 0 10px
         a
@@ -151,8 +163,11 @@
 
     .options
       clearfix()
-      position relative
-      float right
+      @media XS
+        position absolute
+        right 15px
+        top 0
+      // float right
       .search,
       .compare,
       .cart

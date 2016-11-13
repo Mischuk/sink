@@ -3,133 +3,212 @@ extends ../modules/layout/layout.jade
 block title
   title Главная
 
-block header
-  header.m_header
-    .top-header
-      .wrapper
-        .menu
-          ul
-            li: a(href="#") Условия оплаты
-            li: a(href="#") Доставка
-            li: a(href="#") Вопрос-ответ
-            li: a(href="#") Отзывы
-        .callback: a(class="call-popup" href="#popup-callback") Заказать звонок
-        .tel: a(href="tel:+88002000600") 8 800 2000 600
-    .bottom-header
-      .wrapper
-        .logo: a(href="#")
-        .menu
-          ul
-            li.menu-lead-item
-              a(href="#") Каталог
-              .m_menu-dropdown
-                .column
-                  .category
-                    .title: a(href="#") Кухонные мойки
-                    ul
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                  .category
-                    .title: a(href="#") Сместители
-                    ul
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                .column
-                  .category
-                    .title: a(href="#") Ванны
-                    ul
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                      li: a(href="#") Подкатегория
-                  .category
-                    .title: a(href="#") Душевые кабины
-                  .category
-                    .title: a(href="#") Унитазы
-                  .category
-                    .title: a(href="#") Доп. категория
-                .column
-                  .recommended
-                    .title Рекомендуем
-                    .m_item
-                      .image
-                        a(href="#"): img(src="images/content/item/1.png" alt="")
-                      .details
-                        .title: a(href="#") Душевая кабина Jacuzzi Frame
-                        .articul
-                          .label Артикул:
-                          .value 9448-2721254
-                        .produced
-                          .label Производитель:
-                          .value Jacuzzi
-                        .available В наличии
-                        .not-available Нет в наличии
-                        .price
-                          .old 15 000
-                          .current 12 450
-                        .action
-                          a(href="#") Купить
-
-            li.menu-lead-item: a(href="#") Акции
-            li.menu-lead-item: a(href="#") Услуги
-            li.menu-lead-item: a(href="#") О компании
-            li.menu-lead-item: a(href="#") Контакты
-        .options
-          //- Мобильное меню
-          .mobile-menu
-            .mobile-menu-trigger: span
-          //- Корзина
-          .cart(title="Корзина")
-            a(href="#")
-              span.icon
-              span.total 1
-              span.label Корзина
-            .total-sum 6 299.10
-          //- Сравнение товаров
-          .compare(title="Сравнение товаров")
-            a(href="#")
-              span.icon
-              span.total 12
-          //- Поиск
-          .search(title="Поиск")
-            a(href="#")
-              span.icon
-    include ../modules/menu-phone/m_menu-phone
-    include ../modules/header-search/m_header-search
-    include ../modules/header-cart/m_header-cart
-
-block popups
-  // Popup: callback
-  div(id="popup-callback" class="zoom-anim-dialog mfp-hide popup")
-    h2 Заказать звонок
-    p Мы свяжемся с вами в удобное для Вас время
-    form
-      .form-row
-        input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
-      .form-row
-        input(type="tel" placeholder="Ваш телефон" autocomplete="off")
-      .form-row
-        textarea(placeholder="Текст вопроса")
-      .form-row
-        button(type="submit") Отправить заявку
-  // Popup: success
-  a(id="success" class="call-popup" href="#popup-success")
-  div(id="popup-success" class="zoom-anim-dialog mfp-hide popup")
-    h2 Наш менеджер свяжется с Вами в ближайшее время
 block content
-  .wrapper
+  .m_lead-carousel
+    .lead-carousel
+      .slide
+        .image(style="background-image: url('images/content/carousel/1.jpg')")
+        .text
+          .vertical-outer
+            .vertical-inner
+              h1 Комплектом <span class="red">дешевле</span>
+              p Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!»
+              .action: a(href="#") Подробнее <i class="icon-details"></i>
+      .slide
+        .image(style="background-image: url('images/content/carousel/1.jpg')")
+        .text
+          .vertical-outer
+            .vertical-inner
+              h1 Скидки на все товары до <span class="red">-20%</span>
+              p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+              .action: a(href="#") Подробнее <i class="icon-details"></i>
+  .m_pluses
+    .wrapper
+      .column
+        .image: img(src="images/icon-pluses-1.png" alt="")
+        .title Доставка<br>по всей России
+        .desc Lorem Ipsum is simply dummy text of the printing and typesetting industry
+      .column
+        .image: img(src="images/icon-pluses-2.png" alt="")
+        .title Доставка<br>по всей России
+        .desc Lorem Ipsum is simply dummy text of the printing and typesetting industry
+      .column
+        .image: img(src="images/icon-pluses-3.png" alt="")
+        .title Доставка<br>по всей России
+        .desc Lorem Ipsum is simply dummy text of the printing and typesetting industry
+      .column
+        .image: img(src="images/icon-pluses-4.png" alt="")
+        .title Доставка<br>по всей России
+        .desc Lorem Ipsum is simply dummy text of the printing and typesetting industry
+  .m_lead-categories
+    .wrapper
+      .items
+        .item.large
+          .image: a(href="#" style="background-image: url('images/content/lead-categories/1.jpg')")
+          a(href="#").frame
+            .details
+              .title: span Кухонные мойки
+              span.price от 12 450
+        .item
+          .image: a(href="#" style="background-image: url('images/content/lead-categories/2.jpg')")
+          a(href="#").frame
+            .details
+              .title: span Смесители
+              span.price от 12 450
+        .item
+          .image: a(href="#" style="background-image: url('images/content/lead-categories/3.jpg')")
+          a(href="#").frame
+            .details
+              .title: span Душевые кабины
+              span.price от 12 450
+        .item.large
+          .image: a(href="#" style="background-image: url('images/content/lead-categories/4.jpg')")
+          a(href="#").frame
+            .details
+              .title: span Ванны
+              span.price от 12 450
+      .action: a(href="#") Перейти в каталог <i class="icon-details"></i>
 
+  .m_top-items
+    .wrapper
+      .top-items-nav
+        a(class="top current" href="#") Хит продаж
+        a(class="new" href="#") Новинка
+        a(class="sale" href="#") Акция
+        a(class="recommend" href="#") Советуем
+      .top-items-loader
+        span
+        span
+        span
+      .top-items-content
+        // Добавить класс к m_item для иконки
+        // .m_item.icon-top  - Иконка "Хит продаж"
+        // .m_item.icon-sale - Иконка "Скидка"
+        // .m_item.icon-new  - Иконка "Новинка"
+        // Хиты продаж
+        .top-items-carousel-top.top-item-carousels.enabled
+          - for (var x = 0; x < 15; x++)
+            .slide
+              include ../modules/item/m_item
+        // Новинки
+        .top-items-carousel-new.top-item-carousels.disabled
+          - for (var x = 0; x < 15; x++)
+            .slide
+              include ../modules/item/m_item
+        // Акции и скидки
+        .top-items-carousel-sale.top-item-carousels.disabled
+          - for (var x = 0; x < 15; x++)
+            .slide
+              include ../modules/item/m_item
+        // Советуем
+        .top-items-carousel-recommend.top-item-carousels.disabled
+          - for (var x = 0; x < 15; x++)
+            .slide
+              include ../modules/item/m_item
+      .action: a(href="#") Перейти в раздел <i class="icon-details"></i>
+  .m_brands
+    .wrapper
+      h2 Бренды
+      .brands-carousel
+        .slide: .image: a(href="#"): img(src="images/content/brands/1.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/2.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/3.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/4.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/5.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/6.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/5.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/3.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/2.png" alt="")
+  .m_lead-sales
+    .wrapper
+      h2 Акции и распродажи
+      .lead-sales-carousel
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/1.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/2.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/3.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/4.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/1.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+      .action: a(href="#") Смотреть все <i class="icon-details"></i>
+  .m_lead-contacts
+    .wrapper
+      h2 Наш магазин на карте
+      .columns
+        .info
+          .vertical-outer
+            .vertical-inner
+              .locate г. Москва
+              .address Адрес: ул. Воронцовская, 20
+              .tel Телефон: 8 (495) 505-49-04
+              .action: a(class="call-popup" href="#popup-callback") Заказать звонок
+        .map
+          script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+          script.
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map', {
+                        center: [55.737061, 37.657143],
+                        zoom: 15,
+                        controls: ['zoomControl']
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                        hintContent: 'Собственный значок метки',
+                        balloonContent: 'Это красивая метка'
+                    }, {
+                        // Опции.
+                        // Необходимо указать данный тип макета.
+                        iconLayout: 'default#image',
+                        // Своё изображение иконки метки.
+                        iconImageHref: 'images/marker.png',
+                        // Размеры метки.
+                        iconImageSize: [32, 50],
+                        // Смещение левого верхнего угла иконки относительно
+                        // её "ножки" (точки привязки).
+                        iconImageOffset: [-20, -50]
+                    });
 
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.disable('scrollZoom');
+            });
+          #map
+  .m_lead-about
+    .wrapper
+      .column
+        .image(style="background-image: url('images/content/about.png')"): .frame
+      .column
+        article
+          h2 О компании
+          p.lead-paragraph: i Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку, выбрать способ оплаты и доставки заказа в сети Интернет.
+          p Выбрав необходимые товары или услуги, пользователь обычно имеет возможность тут же на сайте выбрать метод оплаты и доставки.
+          p Основное отличие Интернет-магазина от традиционного — в типе торговой площадки. Обычному магазину нужен торговый зал, витрины, ценники, а также продавцы, кассиры и опытные консультанты, у онлайн-магазина же вся инфраструктура реализована программно.
+          .action: a(href="#") Подробнее <i class="icon-details"></i>

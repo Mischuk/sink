@@ -1,0 +1,31 @@
+.m_item-media
+  border 1px solid #e3e9ea
+  border-radius $radius
+  overflow hidden
+  .image
+    height 180px
+    a
+      display block
+      size(100%)
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+  .details
+    padding 20px
+    .post-date
+      color #999
+      font-size 14px
+      margin-bottom 10px
+    .title
+      margin-bottom 10px
+      a
+        font-weight bold
+        font-size 16px
+        text-decoration underline
+        color #000
+        &:hover
+          color $blue
+          text-decoration none
+    .desc
+      color $text-muted
+      font-size 14px

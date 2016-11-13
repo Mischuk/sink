@@ -1,0 +1,17 @@
+// Popup: callback
+div(id="popup-callback" class="zoom-anim-dialog mfp-hide popup")
+  h2 Заказать звонок
+  p Мы свяжемся с вами в удобное для Вас время
+  form
+    .form-row
+      input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
+    .form-row
+      input(type="tel" placeholder="Ваш телефон" autocomplete="off")
+    .form-row
+      textarea(placeholder="Текст вопроса")
+    .form-row
+      button(type="submit") Отправить заявку
+// Popup: success
+a(id="success" class="call-popup" href="#popup-success")
+div(id="popup-success" class="zoom-anim-dialog mfp-hide popup")
+  h2 Наш менеджер свяжется с Вами в ближайшее время

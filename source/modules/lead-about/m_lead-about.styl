@@ -1,0 +1,46 @@
+.m_lead-about
+  padding 50px 0
+  background #fff
+  @media SM
+    .wrapper
+      display table
+      table-layout fixed
+    .column
+      display table-cell
+      vertical-align top
+      width 50%
+      &:first-child
+        padding-right 30px
+    .image
+      height 100%
+      background-repeat no-repeat
+      background-position 50%
+      background-size cover
+      padding 10px
+      .frame
+        width 100%
+        height 100%
+        border 2px solid rgba(255,255,255,.5)
+  .action
+    margin-top 20px
+    a
+      anim()
+      position relative
+      display inline-block
+      vertical-align middle
+      padding 20px 60px
+      background #fff
+      font-size 16px
+      color $blue
+      border-radius 30px
+      box-shadow 0 6px 16px rgba(0,0,0,.1)
+      .icon-details
+        display inline-block
+        vertical-align middle
+        background: url('../images/sprite.png') no-repeat -150px 0;
+        width: 12px;
+        height: 7px;
+        margin-left 5px
+      &:hover
+        color #000
+        box-shadow 0 6px 32px rgba(0,0,0,.2)

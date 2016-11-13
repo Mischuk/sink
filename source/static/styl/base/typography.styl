@@ -17,3 +17,31 @@ h6
 p
   margin-top 0
   margin-bottom 20px
+
+.red
+  color $red
+
+article
+  h2
+    position relative
+    font-size 24px
+    text-transform uppercase
+    font-weight bold
+    margin-bottom 40px
+    &:after
+      content ''
+      width 70px
+      height 2px
+      background $blue
+      position absolute
+      left 0
+      bottom -19px
+  p
+    font-size 14px
+    line-height 22px
+    color $text-muted
+    &.lead-paragraph
+      font-size 16px
+      font-style italic
+    &:last-child
+      margin-bottom 0

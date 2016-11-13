@@ -1,9 +1,33 @@
 .m_item
+  position relative
   background #fff
   box-shadow 0 2px 7px #e5eaeb
   border solid 1px #eeefef
   border-radius $radius
   padding 15px
+  &:after
+    position absolute
+    right 10px
+    top 10px
+    width 50px
+    height 50px
+    color #fff
+    font-size 9px
+    text-transform uppercase
+    text-align center
+    border-radius 50%
+    line-height 50px
+  &.icon-new:after
+    content 'Новинка'
+    background $blue
+  &.icon-sale:after
+    content 'Скидка'
+    background #9d0ee0
+  &.icon-top:after
+    content 'Хит продаж'
+    line-height 1
+    padding-top 15px
+    background #f3b838
   .image
     height 200px
     line-height 200px
