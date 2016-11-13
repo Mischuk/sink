@@ -1,0 +1,59 @@
+.m_header-search
+  anim()
+  background url("../images/patterns/pattern3.jpg") repeat 0 0
+  padding 30px 10px 50px
+  position absolute
+  left 0
+  top -100%
+  width 100%
+  &.open
+    top 100%
+  @media SM
+    max-width 700px
+    left auto
+    right 0
+    padding-left 30px
+    padding-right 30px
+    box-shadow 0 6px 16px rgba(0,0,0,.1)
+  @media LG
+    right 50%
+    margin-right -585px
+  h2
+    text-transform uppercase
+    font-size 24px
+    font-weight bold
+    margin-bottom 25px
+  form
+    clearfix()
+    input, button
+      height 40px
+    input
+      anim()
+      float left
+      width 70%
+      border 1px solid $border
+      border-radius $radius
+      padding 0 10px
+      background #fff
+      font-size 16px
+      @media SM
+        width 75%
+      &:focus
+        font-weight normal
+        border-color #fff
+        box-shadow 0 6px 32px rgba(0,0,0,.2)
+    button
+      anim()
+      float right
+      width 25%
+      border 1px solid $blue
+      border-radius $radius
+      background none
+      color $blue
+      text-transform uppercase
+      font-size 12px
+      @media SM
+        width 23%
+      &:hover
+        background $blue
+        color #fff

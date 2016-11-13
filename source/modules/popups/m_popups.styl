@@ -1,0 +1,96 @@
+.background-layer
+  trs(background)
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background rgba(37, 37, 37, 0)
+  z-index 500
+  &.active
+    position fixed
+    background rgba(37, 37, 37, .6)
+    @media SM
+      position static
+.mfp-bg
+  background rgba(37, 37, 37, .6)
+.mfp-close
+  text-indent -9999px
+  opacity 1
+  &:after
+    content ''
+    sprite()
+    size(10px)
+    position absolute
+    left 50%
+    top 50%
+    margin-left -5px
+    margin-top -5px
+    background-position 0 0
+  &:hover
+    &:after
+      background-position -50px 0
+.popup
+  max-width 570px
+  background url("../images/patterns/pattern3.jpg") repeat 0 0
+  margin 20px auto
+  padding 35px 15px
+  text-align center
+  @media SM
+    padding 70px 60px
+  h2
+    text-transform uppercase
+    font-size 24px
+    font-weight bold
+    margin-bottom 15px
+  p
+    font-style italic
+    font-size 18px
+    color $text-muted
+  form
+    @media SM
+      padding-top 20px
+    .form-row
+      & + .form-row
+        margin-top 15px
+    input, textarea
+      anim()
+      width 100%
+      padding 0 20px
+      border-radius 30px
+      border solid 1px #e3e9ea
+      box-shadow 0 2px 7px #e5eaeb
+      background #fff
+      text-align center
+      &:focus
+        border-color #fff
+        box-shadow 0 6px 32px rgba(0,0,0,.2)
+        text-align left
+    textarea
+      line-height 1.2
+      resize none
+      height auto
+      vertical-align middle
+      padding-top 20px
+      &:focus
+        padding-top 10px
+        padding-bottom 10px
+    input
+      height 60px
+    button
+      anim()
+      width 100%
+      background $blue
+      color #fff
+      border none
+      line-height 60px
+      height 60px
+      border-radius 30px
+      &:hover
+        background $red
+
+#popup-success
+  h2
+    font-style italic
+    text-transform none
+    font-weight normal
+    margin-bottom 0

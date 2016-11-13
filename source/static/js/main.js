@@ -27,5 +27,7 @@ $(function() {
     };
     inputMask();
 
+    autosize($('textarea'));
+
     //=include modules.js
 });

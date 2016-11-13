@@ -1,18 +1,17 @@
 // Mobile burger button
 .mobile-menu-trigger
   anim()
-  display block
   position absolute
-  z-index 10
-  left 0
+  left 50%
   top 50%
-  width 50%
-  height 40px
+  height 27px
+  width 34px
+  margin-left -(@width/2)
   margin-top -(@height/2)
-  border 2px solid transparent
+  display block
+  border 5px solid transparent
   cursor pointer
-  background #810000
-  @media screen and (min-width: 768px)
+  @media SM
     display none
   &:after,
   &:before,
@@ -24,11 +23,11 @@
     width 20px
     margin-left -10px
     height 2px
-    background #fff
+    background #000
   &:before
-    top 10px
+    top 0
   &:after
-    bottom 10px
+    bottom 0
   span
     top 50%
     margin-top -1.5px
@@ -39,5 +38,29 @@
     &:after
       transform rotate(135deg) translate(-6px, 6px)
     &:before
-      transform rotate(-135deg) translate(-4px, -4px)
+      transform rotate(-135deg) translate(-5px, -4px)
 
+.h-close
+  width 30px
+  height 30px
+  position absolute
+  right 0
+  top 0
+  background none
+  border none
+  display none
+  @media SM
+    display block
+  &:after
+    content ''
+    sprite()
+    size(10px)
+    position absolute
+    left 50%
+    top 50%
+    margin-left -5px
+    margin-top -5px
+    background-position 0 0
+  &:hover
+    &:after
+      background-position -50px 0
