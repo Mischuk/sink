@@ -1,0 +1,107 @@
+.m_item
+  background #fff
+  box-shadow 0 2px 7px #e5eaeb
+  border solid 1px #eeefef
+  border-radius $radius
+  padding 15px
+  .image
+    height 200px
+    line-height 200px
+    text-align center
+    a
+      display block
+      border-bottom none !important
+      img
+        display inline-block
+        vertical-align middle
+        max-width 100%
+        max-height 100%
+  .details
+    .title
+      margin-bottom 15px
+      a
+        font-size 16px
+        border none !important
+        line-height 1.2 !important
+        display inline-block
+        vertical-align middle
+        color #000
+        text-decoration underline
+        &:hover
+          color $blue
+          border-color transparent
+    .articul,
+    .produced
+      font-size 14px
+      .label, .value
+        display inline-block
+        vertical-align middle
+      .label
+        color #999
+    .produced
+      margin-bottom 15px
+    .available,
+    .not-available
+      font-size 14px
+    .available
+      color #16a120
+    .not-available
+      color $red
+    .price
+      margin-top 15px
+      margin-bottom 15px
+      .old, .current
+        display inline-block
+        vertical-align middle
+        line-height 22px
+        position relative
+      .old
+        text-decoration line-through
+        color #999
+        font-size 14px
+        padding-right 10px
+        margin-right 20px
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -250px 0;
+          width: 8px;
+          height: 10px;
+          position absolute
+          right 0
+          top 50%
+          margin-top -(@height/2)
+      .current
+        font-weight bold
+        font-size 22px
+        padding-right 20px
+        &:after
+          content ''
+          background: url('../images/sprite.png') no-repeat -200px 0;
+          width: 12px;
+          height: 14px;
+          position absolute
+          right 0
+          top 50%
+          margin-top -(@height/2)
+    .action
+      a
+        display inline-block
+        vertical-align middle
+        width 120px
+        height 35px
+        text-align center
+        line-height 35px !important
+        border-bottom none !important
+        border-radius $radius
+        color #fff
+        font-size 16px !important
+        background: rgba(222,10,13,1);
+        background: -moz-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,10,13,1)), color-stop(100%, rgba(237,59,61,1)));
+        background: -webkit-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: -o-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: -ms-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: linear-gradient(to right, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        &:hover
+          background $red
+

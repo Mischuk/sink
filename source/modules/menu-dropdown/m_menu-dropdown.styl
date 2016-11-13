@@ -1,0 +1,53 @@
+.m_menu-dropdown
+  clearfix()
+  background url("../images/patterns/pattern3.jpg") repeat 0 0
+  position absolute
+  left 0
+  top 100%
+  width 100%
+  box-shadow 0 6px 16px rgba(0,0,0,.1)
+  border-top 2px solid $red
+  padding 25px 25px 50px
+  display none
+  .column
+    float left
+    width 37%
+    padding-right 50px
+    &:last-child
+      width 26%
+      padding-right 0
+    .category
+      min-height 40px
+      .title
+        text-align left
+        margin 25px 0 15px
+        a
+          font-size 18px
+          font-weight bold
+          color #000
+          &:hover
+            border-color transparent
+      ul
+        display block
+        text-align left
+        cursor default
+        li
+          display inline-block
+          vertical-align middle
+          padding-right 10px
+          padding-left 0
+          padding-bottom 10px
+          a
+            color $blue
+            border-color rgba(19, 119, 223, .3)
+            font-size 14px
+            &:hover
+              color #000
+              border-color transparent
+  .recommended
+    text-align left
+    max-width 270px
+    .title
+      margin 25px 0 15px
+      font-size 18px
+      font-weight bold
