@@ -15,7 +15,7 @@ function popups() {
     mainClass: 'my-mfp-zoom-in',
     callbacks: {
         open: function() {
-            $('#popup-callback button[type=submit]').on('click', function(e){
+            $('.popup button[type=submit]').on('click', function(e){
               $.magnificPopup.close();
               setTimeout(function(){
                   $('#success').trigger('click');

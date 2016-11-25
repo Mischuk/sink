@@ -1,0 +1,69 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Акции
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Акции
+    .page-heading
+      h2 Акции
+    .main
+      aside.sidebar.right
+        .m_sidebar-ask
+          .action
+            a(class="call-popup" href="#popup-question") Задать вопрос
+          .desc Наши специалисты с радостью ответят на любой интересующий по нашим услугам вопрос.
+      section.content
+        article
+          p.lead-paragraph Промо-акция — это разновидность рекламной активности, при которой происходит прямой контакт с потребителем товаров или услуг. Во время этого контакта потенциальный покупатель получает информацию о товаре, услуге, условиях акций и скидках.
+          p Общая цель проведения промо-акций всегда одна — увеличение продаж. Но достигаться эта цель может путем реализации различных задач. В зависимости от поставленных задач, выбирается механика планируемой промо-акции.
+        .m_media
+          .m_item-media.horizontal
+            .image: a(href="#" style="background-image: url('images/content/media/1.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Комплектом дешевле
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+          .m_item-media.horizontal
+            .image: a(href="#" style="background-image: url('images/content/media/2.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Комплектом дешевле
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+          .m_item-media.horizontal
+            .image: a(href="#" style="background-image: url('images/content/media/3.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Комплектом дешевле
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+          .m_item-media.horizontal
+            .image: a(href="#" style="background-image: url('images/content/media/4.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Комплектом дешевле
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+          .m_item-media.horizontal
+            .image: a(href="#" style="background-image: url('images/content/media/1.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Комплектом дешевле
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .m_paginations
+          ul
+            li: button(class="prev" type="button"): i
+            li: a(href="#") 1
+            li: a(href="#") 2
+            li: a(href="#") 3
+            li: a(href="#") 4
+            li.current: a(href="#") 5
+            li: a(href="#") 6
+            li: a(href="#") 7
+            li: a(href="#") 8
+            li: a(href="#") 9
+            li: a(href="#") 10
+            li: button(class="next" type="button"): i
+

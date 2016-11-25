@@ -64,6 +64,35 @@
         color #999
     .produced
       margin-bottom 15px
+    .status-compare
+      overflow hidden
+      .status
+        float left
+      .compare
+        float right
+        a
+          anim()
+          position relative
+          color $blue
+          text-decoration underline
+          font-size 14px
+          &:after
+            anim()
+            content ''
+            width 14px
+            height 16px
+            sprite()
+            position absolute
+            left -20px
+            top 50%
+            margin-top -10px
+            background-position -400px -50px
+            opacity .4
+          &:hover
+            color #000
+            text-decoration none
+            &:after
+              opacity 1
     .available,
     .not-available
       font-size 14px

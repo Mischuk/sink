@@ -1,0 +1,94 @@
+.m_comments-post
+  background url("../images/patterns/pattern3.jpg") repeat 0 0
+  padding 20px
+  border 1px solid #e5ebec
+  .title
+    font-weight bold
+    text-transform uppercase
+    font-size 16px
+    padding-bottom 15px
+    border-bottom 1px solid #dce4e5
+    margin-bottom 20px
+  .form-row
+    @media MD
+      width 50%
+      &.full
+        width 100%
+    & + .form-row
+      margin-top 20px
+    textarea,
+    input
+      background #fff
+      anim()
+      border 1px solid $border
+      border-radius $radius
+      padding 0 10px
+      background #fff
+      font-size 16px
+      width 100%
+      &:focus
+        font-weight normal
+        border-color #fff
+        box-shadow 0 6px 32px rgba(0,0,0,.2)
+    input
+      height 40px
+    textarea
+      padding 10px
+      min-height 100px
+    .captcha
+      .row
+        margin-top 10px
+        overflow hidden
+        .image, .refresh
+          display inline-block
+          vertical-align middle
+        .image
+          width 140px
+          height 40px
+          background #fff
+          border-radius $radius
+          border 1px solid $border
+        .refresh
+          line-height 40px
+          font-size 14px
+          margin-left 5px
+          a
+            anim()
+            color $blue
+            border-bottom 1px dashed $blue
+            display inline-block
+            vertical-align middle
+            line-height 1
+            &:hover
+              color #000
+              border-color transparent
+    .submit
+      anim()
+      position relative
+      display inline-block
+      vertical-align middle
+      padding 15px 30px
+      background #fff
+      font-size 16px
+      color $blue
+      border-radius 30px
+      box-shadow 0 6px 16px rgba(0,0,0,.1)
+      border none
+      @media MD
+        padding 15px 40px
+      &:hover
+        color #000
+        box-shadow 0 6px 32px rgba(0,0,0,.2)
+    .reset
+      margin-left 15px
+      anim()
+      color $blue
+      border none
+      border-bottom 1px dashed $blue
+      display inline-block
+      vertical-align middle
+      line-height 1
+      background none
+      &:hover
+        color #000
+        border-color transparent

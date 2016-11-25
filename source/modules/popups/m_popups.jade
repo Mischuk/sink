@@ -11,6 +11,45 @@ div(id="popup-callback" class="zoom-anim-dialog mfp-hide popup")
       textarea(placeholder="Текст вопроса")
     .form-row
       button(type="submit") Отправить заявку
+// Popup: question
+div(id="popup-question" class="zoom-anim-dialog mfp-hide popup")
+  h2 Задать вопрос
+  p Мы свяжемся с вами в удобное для Вас время
+  form
+    .form-row
+      input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
+    .form-row
+      input(type="tel" placeholder="Ваш телефон" autocomplete="off")
+    .form-row
+      input(type="email" placeholder="Email" autocomplete="off")
+    .form-row
+      textarea(placeholder="Вопрос")
+    .form-row
+      button(type="submit") Отправить заявку
+// Popup: fast buy
+div(id="popup-fast" class="zoom-anim-dialog mfp-hide popup")
+  .m_header-cart
+    h2 Купить в 1 клик
+    .total-items
+      .item
+        .image: a(href="#"): img(src="images/content/cart/1.png" alt="")
+        .desc
+          .title: a(href="#") Душевая кабина Jacuzzi Frame
+          .details
+            .amt <span class="sum-value">6 299.10</span> x 1 шт.
+            .sum 6 299.10
+    .total-sum
+      span.label Общая сумма:
+      span.sum 12 598.20
+  form
+    .form-row
+      input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
+    .form-row
+      input(type="tel" placeholder="Ваш телефон" autocomplete="off")
+    .form-row
+      textarea(placeholder="Комментарий к заказу")
+    .form-row
+      button(type="submit") Отправить заявку
 // Popup: success
 a(id="success" class="call-popup" href="#popup-success")
 div(id="popup-success" class="zoom-anim-dialog mfp-hide popup")

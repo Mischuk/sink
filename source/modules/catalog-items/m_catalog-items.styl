@@ -1,0 +1,144 @@
+.m_catalog-items
+  position relative
+  .header
+    overflow hidden
+    margin-top 15px
+    line-height 15px
+    padding 10px 0
+    border-bottom 1px solid #eeefef
+    margin-bottom 15px
+    margin-top 30px
+    .sort
+      float left
+      text-transform uppercase
+      font-size 12px
+      .label
+        display inline-block
+        vertical-align middle
+        color #999
+        margin-right 10px
+      a
+        display inline-block
+        vertical-align middle
+        padding 0 5px
+        color $blue
+        span
+          display inline-block
+          vertical-align middle
+          line-height 1
+          border-bottom 1px dashed $blue
+        i
+          display inline-block
+          vertical-align middle
+          width 5px
+          height 9px
+          sprite()
+          background-position -250px -400px
+          margin-left 2px
+          margin-top -2px
+    .display
+      float right
+      cursor default
+      display none
+      @media LG
+        display block
+      a
+        anim()
+        display inline-block
+        vertical-align middle
+        width 13px
+        height 13px
+        opacity .3
+        margin-left 5px
+        &:hover,
+        &.current
+          opacity 1
+        &.display-grid
+          sprite()
+          background-position -400px 0
+        &.display-row
+          position relative
+          border-top 3px solid #000
+          &:before
+            content ''
+            position absolute
+            left 0
+            top 50%
+            height 3px
+            margin-top -3px
+            width 100%
+            background #000
+          &:after
+            content ''
+            position absolute
+            left 0
+            bottom 0
+            width 100%
+            height 3px
+            background #000
+  .list
+    overflow hidden
+  .item
+    padding 10px
+    @media XS
+      float left
+      width 50%
+      &:nth-child(odd)
+        padding-left 0
+      &:nth-child(even)
+        padding-right 0
+    @media LG
+      width 33.333%
+      padding 7.5px 5px
+      &:nth-child(odd)
+        padding-left 5px
+      &:nth-child(even)
+        padding-right 5px
+      &:nth-child(3n+1)
+        padding-left 0
+        padding-right 10px
+      &:nth-child(3n)
+        padding-right 0
+        padding-left 10px
+  .display-row
+    @media LG
+      overflow visible !important
+      .item
+        float none
+        width 100%
+        padding-left 0 !important
+        padding-right 0 !important
+        .m_item
+          height 215px
+          anim()
+          &:hover
+            box-shadow 0 6px 32px rgba(0,0,0,.2)
+      .image
+        float left
+        width 250px
+        padding-right 15px
+        height 180px
+        line-height 180px
+      .details
+        padding-left 250px
+      .status-compare
+        max-width 200px
+      .price
+        position absolute
+        right 15px
+        top 0
+        width 170px
+        text-align left
+        .current
+          display block !important
+          &:after
+            content ''
+            position relative !important
+            display inline-block !important
+            vertical-align middle !important
+            margin-left 5px
+            margin-top -4px !important
+      .action
+        position absolute
+        right 65px
+        top 75px

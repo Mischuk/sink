@@ -1,0 +1,541 @@
+.m_card
+  position relative
+  .card-gallery
+    @media LG
+      display inline-block
+      vertical-align top
+      width 44%
+      margin-left -10px
+    .card-gallery-single
+      border 1px solid #eeefef
+      height 320px
+      @media XS
+        height 365px
+      @media SM
+        padding-left 10px
+        padding-right 10px
+        border none
+      .slick-dots
+        position absolute
+        left 0
+        bottom 10px
+        width 100%
+        text-align center
+        li
+          display inline-block
+          vertical-align middle
+          margin-left 7px
+          margin-right 7px
+          button
+            width 16px
+            height 16px
+            border-radius 50%
+            text-indent -9999px
+            background none
+            border 3px solid #dcdcdc
+          &.slick-active button
+            position relative
+            border-color #000
+            &:after
+              content ''
+              width 6px
+              height 6px
+              position absolute
+              left 50%
+              top 50%
+              margin-left -3px
+              margin-top -3px
+              background #000
+              border-radius 50%
+      .slide
+        height 320px
+        @media XS
+          height 365px
+        @media SM
+          border 1px solid #eeefef
+        .image, a
+          display block
+          size(100%)
+        .image
+          padding 10px
+          padding-bottom 50px
+        a
+          background-repeat no-repeat
+          background-position 50%
+          background-size contain
+    .card-gallery-thumbs
+      height 110px
+      display none
+      @media SM
+        display block
+        margin-top 10px
+      .slide
+        height 110px
+        padding 10px
+        &.slick-current
+          .image
+            border-color rgba(19, 119, 223, .5)
+        .image
+          border 1px solid #eeefef
+          padding 10px
+        .image, a
+          display block
+          size(100%)
+        a
+          background-size contain
+          background-position 50%
+          background-repeat no-repeat
+  .card-details
+    padding-top 15px
+    @media LG
+      display inline-block
+      vertical-align top
+      width 56%
+      padding-left 10px
+      padding-top 0
+    .card-info
+      position relative
+      .status
+        position absolute
+        right 0
+        top 0
+        .available,
+        .not-available
+          font-size 14px
+        .available
+          color #16a120
+        .not-available
+          color $red
+      .label
+        display inline-block
+        vertical-align middle
+        color #999
+        font-size 14px
+      .value
+        display inline-block
+        vertical-align middle
+        color #555
+        font-size 14px
+        a
+          color $blue
+          text-decoration underline
+          &:hover
+            color #000
+            text-decoration none
+      .status + .row
+        padding-right 80px
+      .row
+        margin-bottom 15px
+        overflow hidden
+        @media LG
+          margin-bottom 31px
+        &:last-child
+          margin-bottom 0
+      .articul, .produced
+        display inline-block
+        vertical-align middle
+        margin-right 10px
+      .compare
+        float right
+        a
+          anim()
+          position relative
+          color $blue
+          text-decoration underline
+          font-size 14px
+          &:after
+            anim()
+            content ''
+            width 14px
+            height 16px
+            sprite()
+            position absolute
+            left -20px
+            top 50%
+            margin-top -10px
+            background-position -400px -50px
+            opacity .4
+          &:hover
+            color #000
+            text-decoration none
+            &:after
+              opacity 1
+      .prices
+        float left
+        .old, .current
+          display inline-block
+          vertical-align middle
+          line-height 22px
+          position relative
+        .old
+          text-decoration line-through
+          color #999
+          font-size 14px
+          padding-right 10px
+          margin-right 20px
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -250px 0;
+            width: 8px;
+            height: 10px;
+            position absolute
+            right 0
+            top 50%
+            margin-top -(@height/2)
+        .current
+          font-weight bold
+          font-size 22px
+          padding-right 20px
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -200px 0;
+            width: 12px;
+            height: 14px;
+            position absolute
+            right 0
+            top 50%
+            margin-top -(@height/2)
+      .parameters
+        .item
+          display inline-block
+          vertical-align top
+          margin-right 10px
+          padding-bottom 10px
+          &:last-child
+            padding-bottom 0
+    .card-options
+      background url("../images/patterns/pattern3.jpg") repeat 0 0
+      border 1px solid #e5ebec
+      padding 20px
+      margin 15px 0
+      @media XS
+        clearfix()
+        text-align center
+        padding 20px 10px
+      @media LG
+        padding 20px
+      .total-items
+        width 110px
+        height 35px
+        text-align center
+        line-height 33px
+        border 1px solid #d1d9da
+        border-radius $radius
+        overflow hidden
+        @media XS
+          display inline-block
+          vertical-align middle
+        input
+          float left
+        .qty
+          width 60px
+          height 34px
+          border 1px solid #d1d9da
+          border-top none
+          border-bottom none
+          text-align center
+          font-size 16px
+          color #555555
+        .qtyminus,
+        .qtyplus
+          width 24px
+          height 34px
+          background #fff
+          color #555
+          border none
+          color #999999
+          font-weight bold
+          &:hover
+            background #fff - 5%
+
+      .short-buy
+        margin-top 10px
+        @media XS
+          margin-top 0
+        a
+          display inline-block
+          vertical-align middle
+          text-align center
+          width 145px
+          height 35px
+          line-height 35px
+          border-radius $radius
+          font-size 16px
+          color #fff
+          background: rgba(57,144,236,1);
+          background: -moz-linear-gradient(top, rgba(57,144,236,1) 0%, rgba(20,118,223,1) 100%);
+          background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(57,144,236,1)), color-stop(100%, rgba(20,118,223,1)));
+          background: -webkit-linear-gradient(top, rgba(57,144,236,1) 0%, rgba(20,118,223,1) 100%);
+          background: -o-linear-gradient(top, rgba(57,144,236,1) 0%, rgba(20,118,223,1) 100%);
+          background: -ms-linear-gradient(top, rgba(57,144,236,1) 0%, rgba(20,118,223,1) 100%);
+          background: linear-gradient(to bottom, rgba(57,144,236,1) 0%, rgba(20,118,223,1) 100%);
+          &:hover
+            background $blue
+      .add-to-cart
+        margin-top 10px
+        @media XS
+          margin-top 0
+        a
+          display inline-block
+          vertical-align middle
+          width 120px
+          height 35px
+          text-align center
+          line-height 35px !important
+          border-bottom none !important
+          border-radius $radius
+          color #fff
+          font-size 16px !important
+          background: rgba(222,10,13,1);
+          background: -moz-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+          background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,10,13,1)), color-stop(100%, rgba(237,59,61,1)));
+          background: -webkit-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+          background: -o-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+          background: -ms-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+          background: linear-gradient(to right, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+          &:hover
+            background $red
+      .total-items
+        @media XS
+          float left
+      .short-buy,
+      .add-to-cart
+        @media XS
+          float right
+          margin-left 10px
+        @media LG
+          margin-left 20px
+    .commerce-services
+      margin-bottom 15px
+      @media XS
+        margin-bottom 0
+      > div
+        position relative
+        padding-left 20px
+        margin-bottom 10px
+        @media XS
+          display inline-block
+          vertical-align middle
+          margin-right 10px
+        &:after
+          content ''
+          sprite()
+          position absolute
+          left 0
+          top 50%
+        &.cirs-buy
+          &:after
+            width 16px
+            height 16px
+            margin-top -7px
+            background-position -200px -50px
+          &:hover:after
+            background-position -150px -50px
+        &.cirs-pay
+          &:after
+            width 17px
+            height 16px
+            margin-top -7px
+            background-position -100px -50px
+          &:hover:after
+            background-position -100px -100px
+        &.cirs-delivery
+          &:after
+            width 16px
+            height 13px
+            margin-top -7px
+            background-position -50px -50px
+          &:hover:after
+            background-position 0px -50px
+        &.cirs-license
+          &:after
+            width 15px
+            height 16px
+            margin-top -7px
+            background-position -50px -100px
+          &:hover:after
+            background-position 0px -100px
+        a
+          color $blue
+          font-size 14px
+          text-decoration underline
+          &:hover
+            color #000
+            text-decoration none
+    .card-social-share
+      font-size 12px
+      color #999999
+      margin-bottom 30px
+      margin-top 30px
+      @media XS
+        margin-top 15px
+        margin-bottom 25px
+      @media LG
+        line-height 40px
+      ul
+        display block
+        padding-top 5px
+        text-align left
+        cursor default
+        @media XS
+          text-align left
+          display inline-block
+          vertical-align middle
+          padding-left 10px
+        @media LG
+          display inline-block
+          vertical-align middle
+          padding-left 10px
+          padding-top 0
+        li
+          display inline-block
+          vertical-align middle
+          size(40px)
+          margin-right 10px
+          @media XS
+            margin-left 0
+            margin-right 10px
+        a
+          anim()
+          position relative
+          display block
+          size(100%)
+          &:after
+            content ''
+            position absolute
+            left 50%
+            top 50%
+            sprite()
+          &.vk
+            background #3e628a
+            &:hover
+              background #3e628a - 15%
+            &:after
+              background-position -50px -400px
+              width 16px
+              height 10px
+              margin-left -(@width/2)
+              margin-top -(@height/2)
+          &.facebook
+            background #375794
+            &:hover
+              background #375794 - 15%
+            &:after
+              background-position -100px -400px
+              width 8px
+              height 16px
+              margin-left -(@width/2)
+              margin-top -(@height/2)
+          &.twitter
+            background #00aced
+            &:hover
+              background #00aced - 15%
+            &:after
+              background-position -150px -400px
+              width 14px
+              height 12px
+              margin-left -(@width/2)
+              margin-top -(@height/2)
+    .card-contact-form
+      background #fff
+      border 1px solid #eeefef
+      padding 20px
+      color #999999
+      font-size 12px
+      line-height 16px
+      text-align center
+      position relative
+      .desc
+        margin-bottom 20px
+        @media LG
+          padding-right 200px
+          text-align left
+          margin-bottom 0
+      .action
+        height 60px
+        text-align center
+        @media LG
+          position absolute
+          right 20px
+          top 50%
+          margin-top -30px
+        a
+          anim()
+          position relative
+          display inline-block
+          vertical-align middle
+          padding 20px 30px
+          background #fff
+          font-size 16px
+          color $blue
+          border-radius 30px
+          box-shadow 0 6px 16px rgba(0,0,0,.1)
+          @media XS
+            padding 20px 60px
+          @media LG
+            padding 20px 30px
+          span
+            display inline-block
+            vertical-align middle
+            line-height 1
+            border-bottom 1px dashed $blue
+          &:hover
+            color #000
+            box-shadow 0 6px 32px rgba(0,0,0,.2)
+            span
+              border-color #000
+  .bottom
+    padding-top 30px
+    .card-tabs-header
+      overflow hidden
+      a
+        anim()
+        display inline-block
+        vertical-align middle
+        height 50px
+        line-height 50px
+        border 1px solid #eeefef
+        padding 0 10px
+        background #f7f9f9
+        font-weight bold
+        text-transform uppercase
+        font-size 14px
+        float left
+        @media screen and (min-width: 380px)
+          width 48%
+          text-align center
+        @media XS
+          width auto
+          float none
+        & + a
+          float right
+          @media XS
+            float none
+            margin-left 10px
+        &.current
+          cursor default
+        &.current,
+        &:hover
+          background #fff
+          span
+            color #000
+            border-color #fff
+        span
+          anim()
+          color #999999
+          display inline-block
+          vertical-align middle
+          border-bottom 1px dashed #999
+          line-height 1
+        @media XS
+          padding 0 40px
+          font-size 16px
+    .card-tabs-content
+      margin-top 15px
+      article
+        border 1px solid #eeefef
+        padding 20px
+      .item
+        display none
+        &.current
+          display block

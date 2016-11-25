@@ -1,0 +1,41 @@
+.m_paginations
+  text-align center
+  margin-top 15px
+  ul
+    cursor default
+  li
+    display inline-block
+    vertical-align middle
+    button
+      background none
+      border none
+      padding 0 4px
+      i
+        display inline-block
+        vertical-align middle
+        width 12px
+        height 7px
+        sprite()
+        background-position -200px -400px
+      &.prev
+        i
+          transform rotate(180deg)
+        &:hover
+          i
+            background-position -150px 0
+      &.next
+        &:hover
+          i
+            background-position -150px 0
+
+    a
+      display inline-block
+      vertical-align middle
+      line-height 1
+      color #000
+      text-decoration underline
+      padding 2px 4px
+    &.current a,
+    &:hover a
+        color $blue
+        text-decoration none

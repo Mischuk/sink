@@ -1,0 +1,97 @@
+.m_catalog-categories
+  clearfix()
+  padding 45px 0 15px 0
+  .column
+    @media SM
+      display inline-block
+      vertical-align top
+      width 49%
+    .lead
+      position relative
+      @media XS
+        padding-left 130px
+      @media SM
+        padding-left 0
+      @media MD
+        padding-left 130px
+      .image
+        left 0
+        top 0
+        width 100px
+        height 100px
+        line-height 100px
+        text-align center
+        margin-bottom 10px
+        @media XS
+          position absolute
+        @media SM
+          position static
+        @media MD
+          position absolute
+        img
+          display inline-block
+          vertical-align middle
+          max-width 100%
+          max-height 100%
+      .links
+        padding-right 20px
+        .title
+          margin-bottom 10px
+          a
+            color #000
+            font-size 18px
+            font-weight bold
+            text-decoration underline
+            &:hover
+              color $blue
+              text-decoration none
+        ul
+          li
+            display inline-block
+            vertical-align top
+            margin-right 10px
+            margin-bottom 10px
+            @media SM
+              margin-right 5px
+            a
+              color $blue
+              text-decoration underline
+              font-size 14px
+              &:hover
+                color #000
+                text-decoration none
+    .desc
+      margin-top 10px
+      margin-bottom 30px
+      color $text-muted
+      font-size 14px
+      line-height 22px
+      padding-right 20px
+  &.level-2
+    position relative
+    .column
+      @media XS
+        padding-left 130px
+      @media SM
+        padding-left 0
+      @media MD
+        padding-left 130px
+        padding-right 20px
+      .image
+        @media XS
+          left -130px
+      .lead
+        @media XS
+          padding-left 0
+    .title
+      a
+        text-decoration none !important
+        .label
+          text-decoration underline
+        .total
+          color #999
+          font-weight bold
+          font-size 18px
+        &:hover
+          .label
+            text-decoration none

@@ -1,0 +1,397 @@
+.m_cart
+  padding 20px 0
+  @media XS
+    padding 30px 0
+  table
+    width 100%
+    tr:first-child
+      @media screen and (max-width: 991px)
+        display none !important
+      @media MD
+        background url("../images/patterns/pattern3.jpg") repeat 0 0
+        th
+          font-weight normal
+          text-align left
+          padding 20px 0
+    tr
+      border 1px solid $border
+      @media screen and (max-width: 991px)
+        position relative
+        padding 10px
+        display block
+        @media XS
+          width 48%
+          float left
+          &:nth-child(2n+1)
+            margin-left 4%
+        @media SM
+          width 31%
+          margin-right 3.5%
+          &:nth-child(2n+1)
+            margin-left 0
+          &:nth-child(4),
+          &:nth-child(7),
+          &:nth-child(10),
+          &:nth-child(13)
+            margin-right 0 !important
+      + tr
+        @media screen and (max-width: 991px)
+          margin-top 15px
+      td
+        @media screen and (max-width: 991px)
+          display block
+        @media LG
+          &:first-child
+            max-width 170px
+  .preview
+    margin-bottom 10px
+    @media MD
+      width 175px
+      margin-bottom 0
+      padding 20px
+      margin-right 0
+      padding-right 0
+    @media LG
+      padding 30px
+      width auto
+    img
+      display block
+      width 100%
+      max-width 100%
+      @media LG
+        width 230px
+  .details
+    .title
+      margin-bottom 15px
+      a
+        font-size 16px
+        border none !important
+        line-height 1.2 !important
+        display inline-block
+        vertical-align middle
+        color #000
+        font-weight bold
+        text-decoration underline
+        &:hover
+          color $blue
+          border-color transparent
+          text-decoration none
+    .articul,
+    .produced
+      font-size 14px
+      .label, .value
+        display inline-block
+        vertical-align middle
+      .label
+        color #999
+    .produced
+      margin-bottom 15px
+
+    .available,
+    .not-available
+      font-size 14px
+    .available
+      color #16a120
+    .not-available
+      color $red
+  .price
+    margin-top 15px
+    margin-bottom 15px
+    .sale
+      margin-top 5px
+      span
+        color #555
+        font-size 12px
+        text-transform uppercase
+        border 1px solid #eeefef
+        background #f7f9f9
+        line-height 1
+        padding 10px
+        border-radius $radius
+        display inline-block
+        vertical-align middle
+    .old, .current
+      display inline-block
+      vertical-align middle
+      line-height 22px
+      position relative
+    .old
+      text-decoration line-through
+      color #999
+      font-size 14px
+      padding-right 10px
+      margin-right 20px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -250px 0;
+        width: 8px;
+        height: 10px;
+        position absolute
+        right 0
+        top 50%
+        margin-top -(@height/2)
+    .current
+      font-weight bold
+      font-size 22px
+      padding-right 20px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -200px 0;
+        width: 12px;
+        height: 14px;
+        position absolute
+        right 0
+        top 50%
+        margin-top -(@height/2)
+  .total-items
+    width 110px
+    height 35px
+    text-align center
+    line-height 33px
+    border 1px solid #d1d9da
+    border-radius $radius
+    overflow hidden
+    @media XS
+      display inline-block
+      vertical-align middle
+    input
+      float left
+    .qty
+      width 60px
+      height 34px
+      border 1px solid #d1d9da
+      border-top none
+      border-bottom none
+      text-align center
+      font-size 16px
+      color #555555
+    .qtyminus,
+    .qtyplus
+      width 24px
+      height 34px
+      background #fff
+      color #555
+      border none
+      color #999999
+      font-weight bold
+      &:hover
+        background #fff - 5%
+  .total-sum
+    @media screen and (max-width: 991px)
+      margin-top 10px
+      padding-top 10px
+      border-top 1px solid $border
+    i
+      font-style normal
+      @media MD
+        display none
+    span
+      font-weight bold
+      font-size 22px
+      padding-right 20px
+      line-height 22px
+      position relative
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -200px 0;
+        width: 12px;
+        height: 14px;
+        position absolute
+        right 0
+        top 50%
+        margin-top -(@height/2)
+  .remove
+    position absolute
+    right 11px
+    top 11px
+    width 30px
+    height 30px
+    background #fff
+    @media MD
+      position static
+      width 60px
+      text-align center
+      margin-right 0
+      max-width 60px
+    .remove-cart-item
+      sprite()
+      display block
+      background-position 0 0
+      background-color #fff
+      border none
+      @media MD
+        width 10px
+        height 10px
+        margin 15px auto
+        &:hover
+          background-position -50px 0
+      @media screen and (max-width: 991px)
+        width 20px
+        height 20px
+        margin-top 5px
+        margin-left 5px
+        background-image url('../images/sprite@2x.png');
+        &:hover
+          background-position -100px 0
+  .cart-sum-result
+    clearfix()
+    border-bottom 1px solid $border
+    @media XS
+      padding-top 15px
+      padding-bottom 15px
+    .promocode
+      position relative
+      float left
+      width 100%
+      padding 15px 0
+      @media SM
+        width 440px
+      @media MD
+        width 540px
+      .label
+        font-size 14px
+        margin-bottom 5px
+        @media XS
+          float left
+      form
+        position relative
+        clearfix()
+        @media XS
+          float right
+        @media SM
+          width 345px
+        @media MD
+          width 445px
+        .submit
+          anim()
+          float right
+          width 40%
+          border 1px solid $blue
+          color $blue
+          background #fff
+          height 40px
+          border-radius $radius
+          text-transform uppercase
+          font-size 12px
+          @media MD
+            width 30%
+          &:hover
+            background $blue
+            color #fff
+        input
+          anim()
+          float left
+          width 58%
+          background #fff
+          border 1px solid $border
+          border-radius $radius
+          padding 0 10px
+          background #fff
+          font-size 16px
+          height 40px
+          @media MD
+            width 68%
+          &:focus
+            font-weight normal
+            border-color #fff
+            box-shadow 0 6px 32px rgba(0,0,0,.2)
+    .total
+      float left
+      width 100%
+      text-align right
+      font-size 20px
+      @media SM
+        width auto
+        float right
+        padding 15px 0
+        line-height 40px
+      .label, .sum
+        display inline-block
+        vertical-align middle
+      .label
+        color #555555
+        margin-right 50px
+      .sum
+        span
+          font-weight bold
+          font-size 20px
+          padding-right 20px
+          line-height 22px
+          position relative
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -200px 0;
+            width: 12px;
+            height: 14px;
+            position absolute
+            right 0
+            top 50%
+            margin-top -(@height/2)
+  .cart-final
+    padding-top 20px
+    @media XS
+      padding-top 30px
+    .row + .row
+      margin-top 10px
+      text-align center
+      @media XS
+        text-align left
+        margin-top -5px
+    .final-submit
+      text-align center
+      @media XS
+        float right
+        text-align left
+      a
+        display inline-block
+        vertical-align middle
+        height 40px
+        text-align center
+        line-height 40px !important
+        border-bottom none !important
+        border-radius $radius
+        color #fff
+        font-size 16px !important
+        padding-left 30px
+        padding-right 30px
+        background: rgba(222,10,13,1);
+        background: -moz-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(222,10,13,1)), color-stop(100%, rgba(237,59,61,1)));
+        background: -webkit-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: -o-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: -ms-linear-gradient(left, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        background: linear-gradient(to right, rgba(222,10,13,1) 0%, rgba(237,59,61,1) 100%);
+        &:hover
+          background $red
+    .continue
+      width 100%
+      text-align center
+      margin-bottom 10px
+      @media XS
+        float left
+        width auto
+        text-align left
+      a
+        anim()
+        display inline-block
+        vertical-align middle
+        border 1px solid $blue
+        color $blue
+        background #fff
+        height 40px
+        line-height 38px
+        padding-left 30px
+        padding-right 30px
+        border-radius $radius
+        text-transform uppercase
+        font-size 12px
+        &:hover
+          background $blue
+          color #fff
+    .backward
+      font-size 14px
+      color #999
+      text-decoration underline
+      &:hover
+        text-decoration none
+        color #000

@@ -1,0 +1,51 @@
+.checkbox
+
+  label
+    user-select-none()
+    position relative
+    display inline-block
+    vertical-align middle
+    padding-left 25px
+    cursor pointer
+    input[type="checkbox"]
+      display none
+    input[type="checkbox"]:checked + .icon
+      background $red
+      border-color $red
+      &:after
+        opacity 1
+        transform scale(1)
+    input[type="checkbox"]:checked + .icon + .label
+      color #000
+    .icon
+      anim()
+      position absolute
+      left 0
+      top 50%
+      size(16px)
+      margin-top -8px
+      border 1px solid #d1d9da
+      border-radius $radius
+      background #fff
+      &:after
+        anim()
+        content ''
+        sprite()
+        width 11px
+        height 8px
+        position absolute
+        left 50%
+        top 50%
+        margin-left -5.5px
+        margin-top -4px
+        background-position -350px 0
+        opacity 0
+        transform scale(0)
+    .label
+      display inline-block
+      vertical-align middle
+      color #999999
+      font-size 12px
+      line-height 16px
+      &:hover
+        color #555

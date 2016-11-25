@@ -1,0 +1,522 @@
+.m_order
+  padding 30px 0
+  .order-bill
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    border: solid 1px #eeefef;
+    margin-bottom 30px
+    padding 30px
+    border-radius $radius
+    @media LG
+      padding-left 30px
+      width 300px
+      float right
+    .items,
+    .delivery,
+    .total
+      clearfix()
+    .label
+      color #555
+      font-size 14px
+      float left
+    .value
+      float right
+      font-size 14px
+      font-weight normal
+      span
+        color #000
+    .items, .delivery
+      .value
+        font-weight bold
+        span
+          display inline-block
+          vertical-align middle
+          padding-right 12px
+          position relative
+          &:after
+            content ''
+            width 8px
+            height 10px
+            sprite()
+            background-position -250px 0
+            position absolute
+            right 0
+            top 50%
+            margin-top -5px
+
+    .total
+      padding-top 30px
+      border-top 1px solid $border
+      .label, .value
+        font-size 16px
+      .value
+        font-weight bold
+        font-size 18px
+        span
+          display inline-block
+          vertical-align middle
+          padding-right 15px
+          position relative
+          &:after
+            content ''
+            width 12px
+            height 14px
+            sprite()
+            background-position -200px 0
+            position absolute
+            right 0
+            top 50%
+            margin-top -7px
+    .positions
+      padding-bottom 30px
+      .items
+        margin-bottom 15px
+  .order-steps
+    @media LG
+      padding-right 330px
+    .step
+      margin-bottom 30px
+      background #f7f9f9
+      border 1px solid #eeefef
+      &.current
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        border: solid 1px #eeefef;
+        background #fff
+    .step-header
+      position relative
+      background #f7f9f9
+      padding 20px
+      font-size 20px
+      font-weight bold
+      color #000
+      text-transform uppercase
+      cursor default
+      border-bottom 1px solid #eeefef
+      &:after
+        content ''
+        sprite()
+        background-position -400px -400px
+        size(20px)
+        position absolute
+        right 20px
+        top 50%
+        margin-top -10px
+        opacity 0
+      span
+        color #999
+    .step-body
+      padding 40px 20px
+      background #fff
+      @media XS
+        overflow hidden
+      .form-section
+        padding-top 15px
+        .form-row
+          margin-bottom 15px
+          &:last-child
+            margin-bottom 0
+        .label
+          font-weight bold
+          font-size 14px
+          margin-bottom 5px
+          .required
+            color $red
+        .input
+          input
+            height 40px
+            //&.error
+            //  border-color $red
+          textarea
+            min-height 100px
+            padding 10px !important
+            font-family 'Roboto', sans-serif
+            resize none
+          input,
+          textarea
+            anim()
+            width 100%
+            background #fff
+            border 1px solid $border
+            border-radius $radius
+            padding 0 10px
+            font-size 16px
+            &:focus
+              border-color #fff
+              box-shadow 0 6px 32px rgba(0,0,0,.2)
+        .remark
+          font-size 12px
+          line-height 16px
+          color #999999
+          cursor default
+    .step-footer
+      clearfix()
+      background #fff
+      border-top 1px solid #eeefef
+      padding 20px
+      button
+        height 35px
+        border 1px solid $blue
+        padding 0 30px
+        text-transform uppercase
+        font-size 12px
+        border-radius $radius
+      .step-prev
+        float left
+        background #fff
+        color $blue
+        &:hover
+          color #fff
+          background $blue
+      .step-next
+        float right
+        color #fff
+        background $blue
+        &:hover
+          border-color $blue - 15%
+          background $blue - 15%
+    /*
+      STEP 1
+    */
+    .step-1
+      .delivery-self
+        .default-icon .icon:after
+          background-position 0 -150px
+          width 61px
+          height 54px
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+        .delivery-form .default-icon-active .icon:after
+          background-position -100px -150px
+          width 61px
+          height 54px
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+      .delivery-courier
+        .default-icon .icon:after
+          background-position -200px -150px
+          width 46px
+          height 55px
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+        .delivery-form .default-icon-active .icon:after
+          width 46px
+          height 55px
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+          background-position -250px -150px
+      .delivery-transport
+        .default-icon .icon:after
+          background-position -300px -150px
+          width 60px
+          height 37px
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+        .delivery-form .default-icon-active .icon:after
+          width 60px
+          height 37px
+          margin-left -(@width/2)
+          margin-top -(@height/2)
+          background-position -400px -150px
+      .delivery-courier,
+      .delivery-transport
+        margin-top 40px
+        @media SM
+          margin-top 0
+      .delivery-transport
+        @media SM
+          margin-top 40px
+      .delivery-self,
+      .delivery-courier,
+      .delivery-transport
+        @media SM
+          display inline-block
+          vertical-align top
+          width 49%
+        .default-icon
+          cursor pointer
+          padding-left 20px
+          padding-right 10px
+          .icon
+            position relative
+            size(100px)
+            float left
+            border-radius 50%
+            border 1px solid $border
+            &:after
+              content ''
+              sprite()
+              position absolute
+              left 50%
+              top 50%
+          .label
+            position relative
+            z-index 100
+            display table
+            height 100px
+            padding-left 10px
+            font-size 14px
+            span
+              display table-cell
+              vertical-align middle
+        .delivery-form
+          display none
+          position relative
+          top -120px
+          margin-bottom -120px
+          background url("../images/patterns/pattern3.jpg") repeat 0 0
+          padding 20px
+          box-shadow 0 2px 7px #e5eaeb, inset 0 0 0 1px #e3e9ea
+          .default-icon-active
+            cursor pointer
+            overflow hidden
+            .icon
+              position relative
+              size(100px)
+              float left
+              border-radius 50%
+              border 1px solid $blue
+              background $blue
+              &:after
+                content ''
+                sprite()
+                position absolute
+                left 50%
+                top 50%
+    /*
+      STEP 2
+    */
+    .step-2
+      .step-body
+        padding 20px
+        .form-date
+          @media SM
+            clearfix()
+      .form-section
+        padding-top 0
+        margin-bottom 20px
+        @media SM
+          float left
+          width 50%
+          margin-bottom 0
+        &:last-child
+          margin-bottom 0
+      .inputs
+        clearfix()
+        @media LG
+          padding-right 50px
+        .input
+          float left
+          width 45%
+          margin-right 5%
+    /*
+      STEP 3
+    */
+    .step-3
+      .step-body
+        padding 20px
+      .form-pay
+        .checkbox
+          margin-bottom 10px
+          &:last-child
+            margin-bottom 0
+          .label
+            font-size 16px
+    /*
+      STEP 4
+    */
+    .step-4
+      .step-body
+        padding 20px
+    /*
+      STEP Final
+    */
+    .step-final
+      .step-header
+        background #fff
+        &:after
+          display none !important
+      .step-body
+        padding 20px
+        .row
+          & + .row
+            margin-top 10px
+        .value,
+        .label
+          display inline-block
+          vertical-align middle
+          font-size 16px
+        .label
+          color #999
+        .value
+          color #555
+      .order-total-items
+        padding 10px
+        background #fff
+        @media MD
+          padding 0
+        .m_cart
+          padding-top 0
+          padding-bottom 0
+          table
+            background #fff
+            tr
+              border-color #eeefef
+              @media MD
+                border-left none
+                border-right none
+              .total-items
+                border none
+                font-size 14px
+                color #555
+                text-align left
+          .cart-sum-result
+            padding 20px
+            background #fff
+            border-bottom none
+            .total
+              width 100%
+              padding 0
+              line-height 1.1
+              text-align left
+              @media XS
+                text-align right
+              &.delivery
+                font-size 14px
+                .sum
+                  span
+                    font-size 14px
+                    padding-right 10px
+                    &:after
+                      background-position -250px 0
+                      width 8px
+                      height 10px
+                      margin-top -5px
+              .label
+                display block
+                @media XS
+                  display inline-block
+              .sum
+                width 120px
+                text-align left
+          .cart-final
+            padding-top 0
+            border-top none
+            .step-footer
+              position relative
+              border-color #eeefef
+              text-align center
+              .step-prev
+                float none
+                display inline-block
+                vertical-align middle
+                margin-bottom 20px
+                @media XS
+                  margin-bottom 0
+                  float left
+              .final-submit
+                a
+                  height 35px
+                  line-height 35px !important
+    // Params
+    .step-body, .step-footer
+      display none
+    .step-final
+      display none
+      &.current
+        display block
+    .step
+      &.current
+        .step-body, .step-footer
+          display block
+      &.complete
+        .step-header:after
+          opacity 1
+  .completed
+    .completed-pay
+      border 1px solid #e5ebec
+      background url("../images/patterns/pattern3.jpg") repeat 0 0
+      padding 20px
+      .title
+        border-bottom 1px solid #e5ebec
+        font-weight bold
+        font-size 16px
+        text-transform uppercase
+        padding-bottom 15px
+        margin-bottom 15px
+      p
+        font-size 16px
+        line-height 24px
+        margin-bottom 0
+        color #555
+        & + p
+          margin-top 10px
+      .remark
+        color #555555
+        font-size 14px
+      .action
+        margin-top 30px
+        margin-bottom 30px
+        a
+          anim()
+          position relative
+          display inline-block
+          vertical-align middle
+          padding 20px 60px
+          background #fff
+          font-size 16px
+          color $blue
+          border-radius 30px
+          box-shadow 0 6px 16px rgba(0,0,0,.1)
+          .icon-details
+            display inline-block
+            vertical-align middle
+            background: url('../images/sprite.png') no-repeat -150px 0;
+            width: 12px;
+            height: 7px;
+            margin-left 5px
+          &:hover
+            color #000
+            box-shadow 0 6px 32px rgba(0,0,0,.2)
+      .e-cards
+        display table
+        margin-bottom 15px
+        > div
+          display table-cell
+          vertical-align middle
+        .label
+          font-weight bold
+          padding-left 30px
+        .icon
+          border 1px solid #e5ebec
+          width 140px
+          height 70px
+          line-height 70px
+          background #fff
+          text-align center
+          img
+            display inline-block
+            vertical-align middle
+    .completed-order-info
+      padding-left 70px
+      position relative
+      @media XS
+        padding-left 120px
+        height 120px
+        margin-bottom 40px
+      &:after
+        content ''
+        width 50px
+        height 50px
+        background url("../images/order-completed.png") no-repeat 0 0
+        background-size cover
+        position absolute
+        left 0
+        top 0
+        @media XS
+          top 50%
+          width 100px
+          height 100px
+          margin-top -50px
+      p
+        margin-bottom 0
+        & + p
+          margin-top 10px

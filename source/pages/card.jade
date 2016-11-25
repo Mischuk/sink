@@ -1,0 +1,285 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Карточка товара
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог
+        li: a(href="#") Раздел каталога
+        li: a(href="#") Подраздел каталога
+    .page-heading
+      h2 Кухонные мойки
+    .main
+      aside.sidebar
+        .m_sidebar-filters
+          form
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Цена
+              .box
+                .price-inputs
+                  input(type="text" placeholder="От")#sidebar-input-start
+                  input(type="text" placeholder="До")#sidebar-input-finish
+                .price-range
+                  #sidebar-slider-format
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Производитель
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №4
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Материал
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №4
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Установка
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №4
+            .filter-options
+              button(class="submit" type="submit") Применить
+              button(class="reset" type="reset") Сбросить
+        .m_sidebar-categories
+          .dropdown-aside-categories
+            .dropdown-aside-categories-header: a(href="#") Каталог
+            .sidebar-categories-box
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Производитель
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Смесители
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Ванны
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Душевые кабины
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+      section.content
+        .m_card
+          .top
+            .card-gallery
+              .card-gallery-single
+                .slide: .image: a(class="gallery-item" href="images/content/card/1.png" style="background-image: url('images/content/card/1.png')")
+                .slide: .image: a(class="gallery-item" href="images/content/card/2.jpg" style="background-image: url('images/content/card/2.jpg')")
+                .slide: .image: a(class="gallery-item" href="images/content/card/3.jpg" style="background-image: url('images/content/card/3.jpg')")
+                .slide: .image: a(class="gallery-item" href="images/content/card/4.jpg" style="background-image: url('images/content/card/4.jpg')")
+              .card-gallery-thumbs
+                .slide: .image: a(href="#" style="background-image: url('images/content/card/1.png')")
+                .slide: .image: a(href="#" style="background-image: url('images/content/card/2.jpg')")
+                .slide: .image: a(href="#" style="background-image: url('images/content/card/3.jpg')")
+                .slide: .image: a(href="#" style="background-image: url('images/content/card/4.jpg')")
+            .card-details
+              .card-info
+                .status: .available В наличии
+                .row
+                  .articul
+                    .label Артикул:
+                    .value 944-28210
+                  .produced
+                    .label Производитель:
+                    .value: a(href="#") Jacuzzi
+                .row
+                  .prices
+                    .old 15 000
+                    .current 12 450
+                  .compare: a(href="#") Сравнить
+                .row
+                  .parameters
+                    .item
+                      .label Размер мойки:
+                      .value 45*45
+                    .item
+                      .label Вырез под мойку:
+                      .value 43*43
+                    .item
+                      .label Чаша:
+                      .value 38*38*16.5
+                    .item
+                      .label Размер базы:
+                      .value от 45 см
+              .card-options
+                .total-items
+                  input(type='button' value='–' class='qtyminus' field='quantity')
+                  input(type='text' name='quantity' value='1' class='qty')
+                  input(type='button' value='+' class='qtyplus' field='quantity')
+                .short-buy: a(class="call-popup" href="#popup-fast") Купить в 1 клик
+                .add-to-cart: a(href="#") В корзину
+              .commerce-services
+                .cirs-buy: a(href="#") Условия покупки
+                .cirs-pay: a(href="#") Условия оплаты
+                .cirs-delivery: a(href="#") Доставка
+                .cirs-license: a(href="#") Гарантия
+              .card-social-share
+                | Поделиться в соц. сетях:
+                ul
+                  li: a(class="vk" href="#")
+                  li: a(class="facebook" href="#")
+                  li: a(class="twitter" href="#")
+              .card-contact-form
+                .desc Вы можете задать любой интересующий вас вопрос по товару. Наши квалифицированные специалисты обязательно вам помогут.
+                .action: a(class="call-popup" href="#popup-question"): span Задать вопрос
+          .bottom
+            .card-tabs-header
+              a(class="current" href="#"): span Описание
+              a(href="#"): span Отзывы о товаре
+            .card-tabs-content
+              .item.current
+                article
+                  p Florentina Липси-600 - компактная кухонная мойка прямоугольной формы, выполненная из искусственного камня, отличающаяся вместительной чашей и наличием специального отверстия под установку аксессуаров (дозатора для мыла или других моющих средств). К достоинствам модели относится практичность, высокое качество изготовления, отличная глубина, элегантный внешний вид, простота ухода. Ещё одна причина купить мойку Флорентина Липси 600 - привлекательная стоимость в сравнении с многими европейскими аналогами.
+                  p Безупречные материалы изготовления
+                  p Все мойки для кухни Florentina изготавливаются из искусственного композитного гранита. Как и натуральному камню данному материала свойственна повышенная долговечность, стойкость к различным воздействиям - тепловым, химическим, механическим, прочность, гигиеничность. Имеющиеся в составе композитного гранита добавки способствуют сохранению исходного внешнего облика на протяжении всего периода эксплуатации, а уход в большинстве случаев ограничивается протиркой губкой или тряпкой.
+                  p Ещё одно неоспоримое преимущество гранитной мойки Florentina Липси-600 - безупречный внешний вид, который позволяет изделию легко вписаться в любой современный интерьер, став его важнейшим украшением и основным функциональным элементом.
+                  p Ещё несколько особенностей модели Липси 600:
+                  p Установить мойку можно на базу от 60 сантиметров, что добавляет универсальности и позволяет найти место для изделия практически на любой современной кухне.
+                  p Наряду с отведенным местом под смеситесь, модель оснащена дополнительным отверстием, в которое можно установить кухонные аксессуары.
+                  p Несмотря на относительную компактность глубина чаши достаточно велика - до 20-21 см, что упростит мойку крупной посуды.
+                  p Наличие в комплекте поставки отводной арматуры с переливом - такая комплектация упростит процесс монтажа и сделает последующую эксплуатацию удобной и простой.
+                  p Не знаете, где купить кухонную мойку Florentina Липси-600? Тогда интернет-магазин Real-Moyki к вашим услугам. Вас ждет большой ассортимент цветовых решений - девять вариантов, привлекательная стоимость и первоклассный сервис. Наша компания является сертифицированным представителем российского производителя Флорентина, поэтому вы гарантировано получите качественную, практичную, надежную, современную сантехнику с оперативной доставкой в любой город России.
+              .item
+                .comments
+                  .m_comment-item
+                    .info
+                      .username Багрянцев Дмитрий
+                      .post-date 06 апреля 2015
+                      .m_rating
+                        a(class="active" href="#")
+                        a(class="active" href="#")
+                        a(class="active" href="#")
+                        a(href="#")
+                        a(href="#")
+                    .post Покупал 1.08.2014 мойку из искусственного камня, самовывозом из Печатников. Мойка Лонгран Соттис С -150 ( черная) , числилась в разделе распродажа по цене 11000 т.р., мне продали ее все же несмотря на данное обстоятельство по цене 13000 т.р.
+                  .m_comment-item
+                    .info
+                      .username Багрянцев Дмитрий
+                      .post-date 06 апреля 2015
+                      .m_rating
+                        a(class="active" href="#")
+                        a(class="active" href="#")
+                        a(class="active" href="#")
+                        a(href="#")
+                        a(href="#")
+                    .post Покупал 1.08.2014 мойку из искусственного камня, самовывозом из Печатников. Мойка Лонгран Соттис С -150 ( черная) , числилась в разделе распродажа по цене 11000 т.р., мне продали ее все же несмотря на данное обстоятельство по цене 13000 т.р.
+                .m_comments-post
+                  .title Оставить отзыв
+                  form
+                    .form-row
+                      input(type="text" placeholder="Представьтесь, пожалуйста" required)
+                    .form-row
+                      input(type="email" placeholder="Электронная почта")
+                    .form-row.full
+                      textarea(placeholder="Текст отзыва" required)
+                    .form-row
+                      .captcha
+                        .c-title Решите пример
+                        .row
+                          .image
+                          .refresh: a(href="#") Обновить
+                        .row
+                          input(type="text" placeholder="Ответ")
+                    .form-row
+                      button(class="submit" type="submit") Отправить
+                      button(class="reset" type="reset") Отмена
+    .m_bottom-viewed-items
+      .bottom-viewed-items-nav
+        a(class="viewed current" href="#") Ранее вы смотрели
+        a(class="top" href="#") Лучшие предложения
+      .bottom-viewed-items-loader
+        span
+        span
+        span
+      .bottom-viewed-items-content
+        .bottom-viewed-item.enabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item
+        .bottom-viewed-item.disabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item

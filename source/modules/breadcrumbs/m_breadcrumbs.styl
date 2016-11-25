@@ -1,0 +1,32 @@
+.m_breadcrumbs
+  padding 15px 0
+  ul
+    cursor default
+  li
+    position relative
+    display inline-block
+    vertical-align middle
+    & + li
+      padding-left 20px
+      &:after
+        content ''
+        sprite()
+        width 12px
+        height 7px
+        background-position -200px -400px
+        position absolute
+        left 2px
+        top 50%
+        margin-top -3px
+    a
+      color #999
+      text-decoration underline
+      font-size 14px
+      &:hover
+        color #000
+        text-decoration none
+    &:last-child
+      a
+        text-decoration none
+        cursor default
+        color #999

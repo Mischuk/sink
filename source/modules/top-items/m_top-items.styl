@@ -1,37 +1,3 @@
-.top-items-loader
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  position absolute
-  left 50%
-  margin-left -50px
-  top 200px
-  z-index 10
-  display none
-  &.show
-    display block
-
-.top-items-loader span
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-radius: 100%;
-  background-color $blue
-  margin: 35px 5px;
-  opacity: 0;
-
-.top-items-loader span:nth-child(1)
-  animation: opacitychange 1s ease-in-out infinite;
-.top-items-loader span:nth-child(2)
-  animation: opacitychange 1s ease-in-out 0.33s infinite;
-.top-items-loader span:nth-child(3)
-  animation: opacitychange 1s ease-in-out 0.66s infinite;
-@keyframes opacitychange
-  0%, 100%
-    opacity: 0;
-  60%
-    opacity: 1;
-
 .m_top-items
   background #fff
   padding 50px 0 40px
@@ -120,3 +86,57 @@
         &:hover
           color #000
           box-shadow 0 6px 32px rgba(0,0,0,.2)
+  &.bottom
+    position relative
+    padding-top 0
+    .slick-arrow
+      top 50px
+    .section-title
+      margin-bottom 45px
+      text-align left
+      font-weight bold
+      text-transform uppercase
+      font-size 20px
+      padding-left 10px
+      padding-right 10px
+      @media XS
+        font-size 24px
+      span
+        display block
+        padding-top 45px
+        border-top 1px solid #eeefef
+        padding-right 80px
+
+.top-items-loader
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position absolute
+  left 50%
+  margin-left -50px
+  top 200px
+  z-index 10
+  display none
+  &.show
+    display block
+
+.top-items-loader span
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color $blue
+  margin: 35px 5px;
+  opacity: 0;
+
+.top-items-loader span:nth-child(1)
+  animation: opacitychange 1s ease-in-out infinite;
+.top-items-loader span:nth-child(2)
+  animation: opacitychange 1s ease-in-out 0.33s infinite;
+.top-items-loader span:nth-child(3)
+  animation: opacitychange 1s ease-in-out 0.66s infinite;
+@keyframes opacitychange
+  0%, 100%
+    opacity: 0;
+  60%
+    opacity: 1;

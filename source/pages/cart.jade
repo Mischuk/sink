@@ -1,0 +1,147 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Корзина
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Корзина
+    .page-heading
+      h2 Корзина
+    .m_cart
+      table
+        tr
+          th
+          th Наименование
+          th Цена
+          th Количество
+          th Сумма
+          th
+        tr
+          td
+            .preview: img(src="images/content/media/1.png" alt="")
+          td
+            .details
+              .title: a(href="#") Душевая кабина Jacuzzi Frame
+              .articul
+                .label Артикул:
+                .value 9448-2721254
+              .produced
+                .label Производитель:
+                .value Jacuzzi
+              .status-compare
+                .status
+                  .available В наличии
+          td
+            .price
+              .old 15 000
+              .current 12 450
+              .sale: span Скидка 10%
+          td
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity')
+              input(type='text' name='quantity' value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity')
+          td
+            .total-sum
+              i Итого:
+              span 12 450
+          td
+            .remove: button(class="remove-cart-item" type="button")
+        tr
+          td
+            .preview: img(src="images/content/media/1.png" alt="")
+          td
+            .details
+              .title: a(href="#") Душевая кабина Jacuzzi Frame
+              .articul
+                .label Артикул:
+                .value 9448-2721254
+              .produced
+                .label Производитель:
+                .value Jacuzzi
+              .status-compare
+                .status
+                  .available В наличии
+          td
+            .price
+              .old 15 000
+              .current 12 450
+              .sale: span Скидка 10%
+          td
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity')
+              input(type='text' name='quantity' value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity')
+          td
+            .total-sum
+              i Итого:
+              span 12 450
+          td
+            .remove: button(class="remove-cart-item" type="button")
+        tr
+          td
+            .preview: img(src="images/content/media/1.png" alt="")
+          td
+            .details
+              .title: a(href="#") Душевая кабина Jacuzzi Frame
+              .articul
+                .label Артикул:
+                .value 9448-2721254
+              .produced
+                .label Производитель:
+                .value Jacuzzi
+              .status-compare
+                .status
+                  .available В наличии
+          td
+            .price
+              .old 15 000
+              .current 12 450
+              .sale: span Скидка 10%
+          td
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity')
+              input(type='text' name='quantity' value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity')
+          td
+            .total-sum
+              i Итого:
+              span 12 450
+          td
+            .remove: button(class="remove-cart-item" type="button")
+      .cart-sum-result
+        .promocode
+          .label Код купона<br>на скидку
+          form
+            input(type="text" placeholder="")
+            button(class="submit" type="submit") Применить
+        .total
+          .label Итого:
+          .sum: span 24 900
+      .cart-final
+        .row
+          .continue: a(href="#") Продолжить покупки
+          .final-submit: a(href="#") Оформить заказ
+        .row
+          a(class="backward" href="#") Вернуться к выбору товара
+    .m_bottom-viewed-items
+      .bottom-viewed-items-nav
+        a(class="viewed current" href="#") Ранее вы смотрели
+        a(class="top" href="#") Лучшие предложения
+      .bottom-viewed-items-loader
+        span
+        span
+        span
+      .bottom-viewed-items-content
+        .bottom-viewed-item.enabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item
+        .bottom-viewed-item.disabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item

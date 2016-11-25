@@ -1,0 +1,31 @@
+.m_sidebar-nav
+  position relative
+  margin-bottom 30px
+  box-shadow 0 6px 16px rgba(0,0,0,.1)
+  border solid 1px #eeefef
+  li
+    border-bottom solid 1px #eeefef
+    a
+      position relative
+      display block
+      font-size 14px
+      color #000
+      padding 18px 20px
+      &:hover
+        color $blue
+      &.current
+        background url("../images/patterns/pattern4.jpg") repeat 0 0
+        color #fff
+        &:after
+          background-position -100px -450px
+      &:after
+        content ''
+        sprite()
+        width 7px
+        height 4px
+        background-position -300px 0
+        position absolute
+        right 20px
+        top 50%
+        margin-top -2px
+        transform rotate(90deg)

@@ -1,0 +1,70 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Контакты
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Контакты
+    .page-heading
+      h2 Контакты
+    .m_contacts
+      .contacts-info
+        .row
+          span.label Часы работы:
+          span.value Пн - Сб: с 9:00 до 20:00
+        .row
+          span.value В воскресенье на Ваши вопросы отвечает дежурный менеджер.
+        .row
+          span.label Адрес:
+          span.value г. Москва, ул. Воронцовская, 20
+        .row
+          span.label Телефон:
+          span.value +7 (495) 505-49-04
+        .row
+          span.label E-mail:
+          span.value: a(href="#") mailbox@paramita.ru
+      .contacts-form
+        .title Свяжитесь с нами
+        form
+          .form-row
+            .input: input(type="text" placeholder="Имя")
+            .input: input(type="email" placeholder="Email")
+          .form-row
+            textarea(placeholder="Сообщение")
+          .form-row
+            button(class="submit" type="submit") Отправить
+  .contacts-map
+    script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script.
+      ymaps.ready(function () {
+          var myMap = new ymaps.Map('map', {
+                  center: [55.737061, 37.657143],
+                  zoom: 15,
+                  controls: ['zoomControl']
+              }, {
+                  searchControlProvider: 'yandex#search'
+              }),
+              myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                  hintContent: 'Собственный значок метки',
+                  balloonContent: 'Это красивая метка'
+              }, {
+                  // Опции.
+                  // Необходимо указать данный тип макета.
+                  iconLayout: 'default#image',
+                  // Своё изображение иконки метки.
+                  iconImageHref: 'images/marker.png',
+                  // Размеры метки.
+                  iconImageSize: [32, 50],
+                  // Смещение левого верхнего угла иконки относительно
+                  // её "ножки" (точки привязки).
+                  iconImageOffset: [-20, -50]
+              });
+
+          myMap.geoObjects.add(myPlacemark);
+          myMap.behaviors.disable('scrollZoom');
+      });
+    #map

@@ -1,0 +1,90 @@
+.m_sidebar-categories
+  box-shadow 0 6px 16px rgba(0,0,0,.1)
+  border solid 1px #eeefef
+  margin-bottom 15px
+  .dropdown-aside
+    border-bottom solid 1px #eeefef
+    .dropdown-aside-header
+      a
+        position relative
+        display block
+        font-size 14px
+        color #000
+        padding 18px 20px
+        &:hover
+          color $blue
+        &:after
+          content ''
+          sprite()
+          width 7px
+          height 4px
+          background-position -300px 0
+          position absolute
+          right 20px
+          top 50%
+          margin-top -2px
+          transform rotate(180deg)
+    .box
+      display none
+      border-top solid 1px #eeefef
+      ul
+        padding-left 30px
+        padding-right 10px
+        padding-top 10px
+        padding-bottom 10px
+        li
+          a
+            position relative
+            display inline-block
+            vertical-align middle
+            color #555
+            font-size 14px
+            padding 5px 0
+            &:after
+              content ''
+              width 2px
+              height 2px
+              background #999
+              position absolute
+              left -10px
+              top 50%
+              margin-top -1px
+            &:hover
+              color $blue
+              &:after
+                background $blue
+    &.open
+      .dropdown-aside-header a
+        background url("../images/patterns/pattern4.jpg") repeat 0 0
+        color #fff
+        &:after
+          transform rotate(0)
+          background-position -100px -450px
+      .box
+        display block
+  .sidebar-categories-box
+    display none
+  .dropdown-aside-categories-header
+    &.open
+      border-bottom: solid 1px #eeefef;
+    a
+      position relative
+      display block
+      font-size 14px
+      color #000
+      padding 18px 20px
+      &:hover
+        color $blue
+      &:after
+        content ''
+        sprite()
+        width 7px
+        height 4px
+        background-position -300px 0
+        position absolute
+        right 20px
+        top 50%
+        margin-top -2px
+        transform rotate(180deg)
+  .dropdown-aside-categories-header.open + .sidebar-categories-box
+    display block

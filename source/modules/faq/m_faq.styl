@@ -1,0 +1,37 @@
+.m_faq
+  position relative
+  border 1px solid #eeefef
+  margin-bottom 30px
+  &:last-child
+    margin-bottom 0
+  .item
+    background #f7f9f9
+    user-select-none()
+    & + .item
+      border-top 1px solid #eeefef
+    &.open
+      .header
+        background #fff
+        span
+          color #000
+          border-color transparent
+      .body
+        display block
+    .header
+      padding 25px 30px
+      cursor pointer
+      span
+        font-size 18px
+        color $blue
+        border-bottom 1px dashed $blue
+      &:hover
+        span
+          border-color transparent
+    .body
+      padding 0px 30px
+      padding-bottom 30px
+      background #fff
+      color #555
+      font-size 14px
+      line-height 22px
+      display none

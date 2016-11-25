@@ -1,0 +1,31 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Оформление заказа
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Оформление заказа
+    .page-heading
+      h2 Заказ сформирован
+    .m_order
+      .completed
+        .completed-order-info
+          .vertical-outer
+            .vertical-inner
+              p Ваш заказ <b>№745</b> от 03.06.2016 16:45:31 успешно создан.
+              p Номер вашей оплаты: <b>№745/1</b>
+        .completed-pay
+          .title Оплата заказа
+          .pay-details
+            .e-cards
+              .icon: img(src="images/order-completed-pay.png" alt="")
+              .label Банковские карты
+            p Услугу предоставляет сервис онлайн-платежей «Яндекс.Касса».
+            p Сумма к оплате по счету: 18 897.30 руб.
+          .action: a(href="#") Оплатить <i class="icon-details"></i>
+          .remark <b>Обратите внимание:</b> если вы откажетесь от покупки, для возврата денег вам придется обратиться в магазин
+

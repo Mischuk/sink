@@ -1,0 +1,270 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Каталог (Уровень 3)
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог
+        li: a(href="#") Раздел каталога
+        li: a(href="#") Подраздел каталога
+    .page-heading
+      h2 Кухонные мойки
+    .main
+      aside.sidebar
+        .m_sidebar-filters
+          form
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Цена
+              .box
+                .price-inputs
+                  input(type="text" placeholder="От")#sidebar-input-start
+                  input(type="text" placeholder="До")#sidebar-input-finish
+                .price-range
+                  #sidebar-slider-format
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Производитель
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №4
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Материал
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label Материал №4
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Установка
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-install")
+                    span.icon
+                    span.label Установка №4
+            .filter-options
+              button(class="submit" type="submit") Применить
+              button(class="reset" type="reset") Сбросить
+        .m_sidebar-categories
+          .dropdown-aside-categories
+            .dropdown-aside-categories-header: a(href="#") Каталог
+            .sidebar-categories-box
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Производитель
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Смесители
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Ванны
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+              .dropdown-aside
+                .dropdown-aside-header: a(href="#") Душевые кабины
+                .box
+                  ul
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+                    li: a(href="#") Подкатегория
+      section.content
+        .m_detail-filters
+          .detail-filters-header
+            .toggle: a(href="#"): span Развернуть форму
+            .desc Вы можете задать любые детальные параметры кухонной мойки, именно той, что подходит интерьеру вашей кухни. Наши специалисты, у которых вы можете получить грамотную консультацию по каждой модели, помогут вам купить и сделать выбор кухонной мойки.
+          .detail-filters-body
+            form
+              .columns
+                .column
+                  .f-title Ширина мойки
+                  .box
+                    .price-inputs
+                      input(type="text" placeholder="От")#width-input-start
+                      input(type="text" placeholder="До")#width-input-finish
+                    .price-range
+                      #width-slider-format
+                .column
+                  .f-title Глубина
+                  .box
+                    .price-inputs
+                      input(type="text" placeholder="От")#depth-input-start
+                      input(type="text" placeholder="До")#depth-input-finish
+                    .price-range
+                      #depth-slider-format
+                .column
+                  .f-title Форма
+                  .inputs
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-shape")
+                        span.icon
+                        span.label Круглая
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-shape")
+                        span.icon
+                        span.label Прямоугольная
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-shape")
+                        span.icon
+                        span.label Квадратная
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-shape")
+                        span.icon
+                        span.label Овальная
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-shape")
+                        span.icon
+                        span.label Угловая
+                .column
+                  .f-title Чаши
+                  .inputs
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-cups")
+                        span.icon
+                        span.label 1 большая
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-cups")
+                        span.icon
+                        span.label 2 большие
+                    .checkbox
+                      label
+                        input(type="checkbox" name="filters-cups")
+                        span.icon
+                        span.label С доп. чашей
+              .bottom-options
+                button(class="submit" type="submit") Применить
+                button(class="reset" type="reset") Сбросить
+
+        .m_catalog-items
+          .header
+            .sort
+              .label Сортировать:
+              a(class="sort-by-price" href="#")
+                span По цене
+                i.arrow
+              a(class="sort-by-rate" href="#")
+                span По популярности
+                i.arrow
+            .display
+              a(class="display-grid current" href="#")
+              a(class="display-row" href="#")
+          .list
+            - for (var x = 0; x < 15; x++)
+              .item
+                include ../modules/item/m_item
+          .m_paginations
+            ul
+              li: button(class="prev" type="button"): i
+              li: a(href="#") 1
+              li: a(href="#") 2
+              li: a(href="#") 3
+              li: a(href="#") 4
+              li.current: a(href="#") 5
+              li: a(href="#") 6
+              li: a(href="#") 7
+              li: a(href="#") 8
+              li: a(href="#") 9
+              li: a(href="#") 10
+              li: button(class="next" type="button"): i
+
+
+    .m_seo-text
+      p: i <b>Пример SEO текста.</b> Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+      p: i Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах. Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку.
+    .m_bottom-viewed-items
+      .bottom-viewed-items-nav
+        a(class="viewed current" href="#") Ранее вы смотрели
+        a(class="top" href="#") Лучшие предложения
+      .bottom-viewed-items-loader
+        span
+        span
+        span
+      .bottom-viewed-items-content
+        .bottom-viewed-item.enabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item
+        .bottom-viewed-item.disabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item

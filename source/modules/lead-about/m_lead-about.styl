@@ -2,21 +2,29 @@
   padding 50px 0
   background #fff
   @media SM
-    .wrapper
-      display table
-      table-layout fixed
+    .columns
+      display block
+      position relative
+      padding-left 50%
     .column
-      display table-cell
-      vertical-align top
-      width 50%
+      position relative
       &:first-child
-        padding-right 30px
+        position absolute
+        left 0
+        top 0
+        width 48%
+        height 100%
     .image
       height 100%
       background-repeat no-repeat
       background-position 50%
       background-size cover
       padding 10px
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
       .frame
         width 100%
         height 100%

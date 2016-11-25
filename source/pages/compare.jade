@@ -1,0 +1,70 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Сравнение товара
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог
+        li: a(href="#") Раздел каталога
+        li: a(href="#") Сравнение товара
+    .page-heading
+      h2 Сравнение товара
+      .m_compare
+        .head
+          .item Материал
+          .item Производитель
+          .item Форма
+          .item Чаши
+          .item Ширина мойки
+          .item Глубина
+        .body
+          .table
+            - for (var x = 0; x < 7; x++)
+              .item
+                button(class="remove-compare-item" type="button")
+                .top
+                  .m_item
+                    .image
+                      a(href="#"): img(src="images/content/item/1.png" alt="")
+                    .details
+                      .title: a(href="#") Душевая кабина Jacuzzi Frame
+                      .articul
+                        .label Артикул:
+                        .value 9448-2721254
+                      .produced
+                        .label Производитель:
+                        .value Jacuzzi
+                      .status-compare
+                        .status
+                          .available В наличии
+                      .price
+                        .current 12 450
+                .bottom
+                  .detail-item Пластик
+                  .detail-item Jacuzzi
+                  .detail-item Круглая
+                  .detail-item 10х10х10 см
+                  .detail-item 10х10х10 см
+                  .detail-item 10х10х10 см
+
+    .m_bottom-viewed-items
+      .bottom-viewed-items-nav
+        a(class="viewed current" href="#") Ранее вы смотрели
+        a(class="top" href="#") Лучшие предложения
+      .bottom-viewed-items-loader
+        span
+        span
+        span
+      .bottom-viewed-items-content
+        .bottom-viewed-item.enabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item
+        .bottom-viewed-item.disabled
+          - for (var x = 0; x < 4; x++)
+            .item
+              include ../modules/item/m_item

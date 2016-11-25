@@ -1,0 +1,101 @@
+.m_compare
+  position relative
+  margin-bottom 30px
+  padding-left 175px
+  @media screen and (max-width: 480px)
+    padding-left 125px
+  .head
+    width 175px
+    position absolute
+    left 0
+    bottom 0
+    @media screen and (max-width: 480px)
+      width 125px
+    .item
+      font-weight bold
+      height 50px
+      line-height 50px
+      padding-left 20px
+      border 1px solid #eeefef
+      border-bottom none
+      border-right none
+      @media screen and (max-width: 480px)
+        font-size 14px
+        padding-left 10px
+      &:last-child
+        border-bottom 1px solid #eeefef
+      &:nth-child(odd)
+        background #f7f9f9
+  .body
+    position relative
+    height 760px
+    overflow auto
+    .table
+      display table
+      height 100%
+      width 100%
+      table-layout fixed
+    .item
+      height 100%
+      width 25%
+      min-width 25%
+      vertical-align top
+      position relative
+      float left
+      @media screen and (max-width: 992px)
+        width 33.333%
+        min-width 33.333%
+      @media screen and (max-width: 768px)
+        width 50%
+        min-width 50%
+      @media screen and (max-width: 568px)
+        width 75%
+        min-width 75%
+      @media screen and (max-width: 480px)
+        width 100%
+        min-width 100%
+      &.table-cell
+        float none
+        display table-cell
+      .remove-compare-item
+        position absolute
+        right 10px
+        top 10px
+        sprite()
+        width 16px
+        height 16px
+        background-position -450px -400px
+        border none
+        z-index 10
+        background-color transparent
+      .m_item
+        box-shadow none
+        border-radius 0
+        border-color transparent
+        box-shadow inset 0 0 0 1px  #eeefef
+        height 400px
+        overflow hidden
+        .price
+          margin-bottom 0
+        .produced,
+        .articul
+          @media screen and (max-width: 568px)
+            display none
+      .bottom
+        position absolute
+        left 0
+        bottom 0
+        width 100%
+        .detail-item
+          height 50px
+          line-height 50px
+          padding-left 20px
+          border-left 1px solid transparent
+          border-right 1px solid transparent
+          border-top 1px solid #eeefef
+          border-bottom none
+          box-shadow inset 1px 0px 0 0 #eeefef, inset -1px 0px 0 0 #eeefef
+          &:last-child
+            border-bottom 1px solid #eeefef
+          &:nth-child(odd)
+            background #f7f9f9
