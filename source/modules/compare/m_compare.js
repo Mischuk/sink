@@ -1,14 +1,18 @@
 function compareCalc() {
 
-
-  $('.m_compare .body').perfectScrollbar();
+  if ( $('html').hasClass('no-touchevents') ) {
+    // $('.m_compare .body').perfectScrollbar('update');
+    $('.m_compare .body').perfectScrollbar();
+  }
 
   var columnWidth = $('.m_compare .body .table .item').width();
   var columnSum = $('.m_compare .body .table .item').length;
-  if ( columnSum > 4) {
-    $('.m_compare .body .table').width(columnSum*(columnWidth));
-    $('.m_compare .body .table .item').width(columnWidth).addClass('table-cell');
-  }
+  //if ( columnSum > 4) {
+  //  $('.m_compare .body .table').width(columnSum*(columnWidth));
+  //  $('.m_compare .body .table .item').width(columnWidth).addClass('table-cell');
+  //}
+  $('.m_compare .body .table').width(columnSum*(columnWidth));
+  $('.m_compare .body .table .item').width(columnWidth).addClass('table-cell');
 
   if ( $('html').hasClass('no-touchevents') ) {
     $('.m_compare .body').perfectScrollbar('update');

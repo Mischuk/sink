@@ -323,9 +323,13 @@ $(function() {
 
     
 
-    
+      if ( $('html').hasClass('no-touchevents') ) {
 
-      $('.m_compare .body').perfectScrollbar();
+        // $('.m_compare .body').perfectScrollbar('update');
+
+        $('.m_compare .body').perfectScrollbar();
+
+      }
 
     
 
@@ -333,13 +337,17 @@ $(function() {
 
       var columnSum = $('.m_compare .body .table .item').length;
 
-      if ( columnSum > 4) {
+      //if ( columnSum > 4) {
 
-        $('.m_compare .body .table').width(columnSum*(columnWidth));
+      //  $('.m_compare .body .table').width(columnSum*(columnWidth));
 
-        $('.m_compare .body .table .item').width(columnWidth).addClass('table-cell');
+      //  $('.m_compare .body .table .item').width(columnWidth).addClass('table-cell');
 
-      }
+      //}
+
+      $('.m_compare .body .table').width(columnSum*(columnWidth));
+
+      $('.m_compare .body .table .item').width(columnWidth).addClass('table-cell');
 
     
 
