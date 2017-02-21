@@ -1,5 +1,7 @@
 function compareCalc() {
-
+  var head_table = $('.m_compare .head').height();
+  var item_table = 400;
+  $('.m_compare .body').height(head_table + item_table + 50);
   if ( $('html').hasClass('no-touchevents') ) {
     // $('.m_compare .body').perfectScrollbar('update');
     $('.m_compare .body').perfectScrollbar();
@@ -38,5 +40,5 @@ $('.remove-compare-item').on('click', function(){
 $(window).on('load', function(){
   if ( $('html').hasClass('touchevents') ) {
     $('.m_compare .body').perfectScrollbar('destroy');
-  }
+  }  
 });

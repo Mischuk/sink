@@ -321,7 +321,11 @@ $(function() {
 
     function compareCalc() {
 
-    
+      var head_table = $('.m_compare .head').height();
+
+      var item_table = 400;
+
+      $('.m_compare .body').height(head_table + item_table + 50);
 
       if ( $('html').hasClass('no-touchevents') ) {
 
@@ -399,7 +403,7 @@ $(function() {
 
         $('.m_compare .body').perfectScrollbar('destroy');
 
-      }
+      }  
 
     });
 
